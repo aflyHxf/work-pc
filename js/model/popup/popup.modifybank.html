@@ -1,0 +1,90 @@
+<% var phoneNum = $mcm().cache.getUserInfoFromCache().phoneNumber; %>
+<%
+    var user = $mcm().cache.getUserInfoFromCache();
+    var business = $business();
+    var bankAccountType = ['','信用卡','借记卡']
+%>
+<div class="popup-view" data-element="popupViewNode">
+    <div class="popup-container">
+        <div class="popup-wrap popup-default popup-modifybank">
+            <div class="head"><p>提款银行资料</p><div class="right-side"><i class="icon icon-popup-close" data-events="click: close;"></i></div></div>
+            <div class="body" class="form-node" >
+                <form data-element="formNode">
+                <div data-element="addressNode">
+                    <div class="UI-input-box">
+                        <label for="oldPassword"><i class="icon icon-lock"></i><span>收款人:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="bankAccountName" name="bankAccountName" value="<%=user.bankAccountName%>">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="bankAccount"><i class="icon icon-lock"></i><span>银行卡号:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="bankAccount" name="bankAccount" value="" placeholder="<%=user.bankAccount%>">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="bankAccountType"><i class="icon icon-lock"></i><span>账户性质:</span></label>
+                        <div class="right-side">
+                        <select name="bankName" id="bankName">
+                            <option value=""></option>
+                            <% for (var i = 0; i < data.bankList.length; i++) { %>
+                                <option value="<%=data.bankList[i].id%>" <%if(user.bankName == data.bankList[i].id){%>selected="selected"<%}%>><%=data.bankList[i].name%></option>
+                            <% } %>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="bankAccountType"><i class="icon icon-lock"></i><span>账户性质:</span></label>
+                        <div class="right-side">
+                            <select name = "bankAccountType">
+                                <% for (var j = 0; j < bankAccountType.length; j++) { %>
+                                    <option value="<%=j%>" <%if(user.bankAccountType == j){%>selected="selected"<%}%>> <%=bankAccountType[j] %>
+                                <% } %>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="UI-input-box">
+                        <label for="bankAccountProvince"><i class="icon icon-lock"></i><span>开户城市:</span></label>
+                        <div class="right-side">
+                            <select name="bankAccountProvince" id="province"></select>
+                            <!-- <input type="password" id="bankAccountProvince" name="bankAccountProvince"> -->
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="bankAccountCityId"><i class="icon icon-lock"></i><span>开户城市: </span></label>
+                        <div class="right-side">
+                            <select name="bankAccountCity" id="city" name="city"\></select>
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="bankAccountDistrictId"><i class="icon icon-lock"></i><span></span></label>
+                        <div class="right-side">
+                            <select name="bankAccountDistrict" id="area" name="area"></select>
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="bankAddress"><i class="icon icon-lock"></i><span>银行网点:</span></label>
+                        <div class="right-side">
+                            <input type="bankAddress" id="bankAddress" name="bankAddress" value="<%=user.bankAddress%>">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="captcha"><i class="icon icon-shield"></i><span>验证码:</span></label>
+                        <div class="right-side">
+                            <input type="text" maxlength="4" name="smsCode" id="captcha">
+                            <div class="send-code">
+                                <span class="btn btn-prime" data-events="click: phoneCode;">获取验证码</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" class="submit" value="确认修改">
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

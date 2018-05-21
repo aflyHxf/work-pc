@@ -1,0 +1,110 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.page-transfer {
+  color: #434343;
+  .l-block {
+    .rem(width, 240px);
+    .rem(height, 368px);
+    .rem3(padding, 40px, 12px, 0);
+    background-color: #eeeeee;
+    .rem(font-size, 18px);
+    float: left;
+    .promotion-progress {
+      float: right;
+      .rem(width, 218px);
+      .rem(height, 100px);
+      background: #fff;
+      .rem3(padding, 20px, 15px, 15px);
+      color: #7b7a7a;
+      .rem(margin-top, 28px);
+    }
+  }
+  .r-block {
+    text-align: center;
+    .rem(font-size, 14px);
+    float: right;
+    .rem(width, 510px);
+    .rem(height, 368px);
+    background: #eee;
+    table {
+      width: 100%;
+      background: #eee;
+      table-layout: fixed;
+      .rem(margin-bottom, 30px);
+      th {
+        font-weight:bold;
+      }
+      th, td {
+        text-align: center;
+        .rem(line-height, 40px);
+        vertical-align: middle;
+      }
+      tbody {
+        tr {
+          cursor: pointer;
+          &:hover {
+            background: #9bd2ff;
+            color: #fff;
+          }
+          &.active {
+            background-color: #1e8fea;
+            color: #fff;
+            td:first-child:before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      td:first-child {
+        text-align: left;
+        &:before {
+          content: "";
+          .icon;
+          .icon-chosen;
+          .rem2(margin, 0, 18px);
+          opacity: 0;
+        }
+      }
+      td:last-child {
+        text-align: right;
+        .rem(padding-right, 56px);
+      }
+    }
+    .UI-input-box {
+      .rem(width, 410px);
+      .rem(height, 30px);
+      .rem(line-height, 30px);
+      .rem(margin-bottom, 10px);
+      background: none;
+      display: inline-block;
+      label {
+        .rem(width, 82px);
+      }
+      .right-side {
+        height: 100%;
+      }
+    }
+    .btn-submit {
+      .rem(width, 90px);
+      .rem(height, 30px);
+      background: #1e8fea;
+      color: #fff;
+      border-radius: 4px;
+    }
+    input[type="radio"] {
+      opacity: 0;
+    }
+  }
+  .tips {
+    .rem(margin-top, 40px);
+    h5 {
+      .rem(font-size, 18px);
+      .rem(margin-bottom, 18px);
+      font-weight: bold;
+    }
+    .rem(font-size, 14px);
+    color: #434343;
+    .rem(line-height, 24px);
+  }
+}

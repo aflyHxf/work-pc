@@ -1,0 +1,72 @@
+<div class="page-alipay-manual">
+    <form class="submit-form" data-element="formNode">
+        <div class="tips-node"><span>友情提示：</span>请于下方栏位输入充值金额、支付宝姓名/昵称，确认无误后点击提交，系统将会自动生成支付宝帐户，您可使用手机支付宝扫一扫支付，或登入支付宝网页转帐。</div>
+        <div class="p32 pl145 pt40">
+            <div class="input-row">
+                <label for="amount">充值金额</label><b>：</b>
+                <div class="UI-input-box"><input type="number" id="amount" name="amount"></div>
+            </div>
+            <div class="input-row">
+                <label for="account">支付宝姓名</label><b>：</b>
+                <div class="UI-input-box"><input type="text" id="account" name="alipayName"></div>
+                <span class="tips">请输入您的支付宝账号或支付宝账户昵称</span>
+            </div>
+            <button class="btn btn-submit">提交</button>
+        </div>
+    </form>
+    <div class="results-view" data-element="resultNode">
+        <div class="tips-node"><span>温馨提示：</span>提交存款申请，系统会自动分配收款账号.手机扫码支付或网页转账指定账号.财务部门审核后添加额度至您的游戏帐号.</div>
+        <table class="records-list">
+            <tr>
+                <th>申请单号</th>
+                <th>申请时间</th>
+                <th>有效时间</th>
+                <th>申请金额</th>
+                <th>当前状态</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td v-param="proposalId"></td>
+                <td v-param="createTime">6月11日17:50</td>
+                <td v-param="validTime"><span class="blue">1小时</span></td>
+                <td v-param="amount"><span class="blue">100000</span></td>
+                <td v-param="status"><span class="blue">审核中...</span></td>
+                <td><button class="btn btn-submit" data-events="click: cancelOrder;">取消</button></td>
+            </tr>
+        </table>
+        <div class="row row-center">
+            <div class="col-6">
+                <div class="payment-node">
+                    <h5>手机扫码支付</h5>
+                    <div class="payment-content">
+                        <img class="qr-code" data-element="QRCodeNode">
+                    </div>
+                    <div class="foot">
+                        <p>1. 开启手机支付宝『扫一扫』。</p>
+                        <p>2. 扫描上方二维码进行转帐。</p>
+                        <p>3. 请于备注栏位输入您的游戏帐号以便自动匹配。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="payment-node">
+                    <h5>支付宝网站支付</h5>
+                    <div class="payment-content">
+                        <div class="payment-info">
+                            <a href="https://www.alipay.com/" target="_blank">
+                                <img src="images/alipayLogo.png" alt="">
+                            </a>
+                            <p>账号：<span v-param="alipayAccount"></span></p>
+                            <p>姓名：<span v-param="alipayName"></span></p>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <p>1. 点击支付宝LOGO前往登录支付宝官网。</p>
+                        <p>2. 向上方支付宝帐户转帐。</p>
+                        <p>3. 请于备注栏位填入您的游戏帐号以便自动匹配。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

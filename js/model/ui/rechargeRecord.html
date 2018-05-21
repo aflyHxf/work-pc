@@ -1,0 +1,29 @@
+<% var tool = $tool(),win = $getCommonVal(),info = $business().topupType,amount = 0; %>
+<% if(list.length > 0){ %>
+<% for(var i = 0,len = win.Math.min(list.length,10);i < len;i ++){ %>
+<% amount += list[i].data.amount; %>
+<tr>
+    <td><%=list[i].proposalId%></td>
+    <td><%=tool.transferDateToString(new win.Date(list[i].createTime))%></td>
+    <td><%=tool.formatCurrency(list[i].data.amount)%></td>
+    <td>
+      <!-- <%=info[list[i].data.topupType] || '手工存款'%> -->
+      <% if(info[list[i].data.topupType]){ %>
+          <%=info[list[i].data.topupType] || '' %>
+      <% }else {%>
+          <%=topupStatus[list[i].type] || '' %>
+      <% } %>
+    </td>
+</tr>
+<% } %>
+<tr class="white">
+    <td colspan="2">当前小计</td>
+    <td colspan="2"><%=tool.formatCurrency(amount)%></td>
+</tr>
+<tr class="black">
+    <td colspan="2">总计</td>
+    <td colspan="2"><%=tool.formatCurrency(stats.totalAmount)%></td>
+</tr>
+<% }else{ %>
+<tr><td colspan="4">暂无记录</td></tr>
+<% } %>

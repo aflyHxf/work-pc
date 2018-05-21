@@ -1,0 +1,40 @@
+<div class="popup-view" data-element="popupViewNode">
+    <div class="popup-container">
+        <div class="popup-wrap popup-default popup-login popup-loginbyphone">
+            <div class="head"><p>登录账号</p><div class="right-side"><i class="icon icon-popup-close" data-events="click: close;"></i></div></div>
+            <div class="body">
+                <form data-element="formNode">
+                    <div class="UI-input-box">
+                        <label for="phoneNum"><i class="icon icon-phone"></i><span>手机号码:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="phoneNum" name="phoneNumber" v-input="phoneNumber">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="smsCode"><i class="icon icon-shield"></i><span>验证码:</span></label>
+                        <div class="right-side">
+                            <input type="text" name="smsCode" id="smsCode" placeholder="请填写4位验证码">
+                            <div class="UIButton" data-events="click: phoneCode;">
+                                <div>获取手机验证码</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" class="submit" value="登录">
+                    </div>
+                    <div class="row foot">
+                        <div class="col-4">
+                            <a data-events="click: switchLoginByNormal;">账号登陆</a>
+                        </div>
+                        <div class="col-4">
+                            <a data-events="click: openRegisterPopup;">注册账号</a>
+                        </div>
+                        <div class="col-4">
+                            <a href="<%=data.getPlatformDetails.csUrl%>" target="_blank">忘记密码</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

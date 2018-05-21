@@ -1,0 +1,15 @@
+<% var tool = $tool(),win = $getCommonVal(),info = $business().orderStatus,amount = 0; %>
+<% if(list.length > 0){ %>
+<% for(var i = 0,len = win.Math.min(list.length,10);i < len;i ++){ %>
+<% amount += list[i].data.amount; %>
+<tr>
+    <td><%=list[i].proposalId%></td>
+    <td><%=tool.transferDateToString(new win.Date(list[i].createTime))%></td>
+    <td><%=tool.formatCurrency(list[i].data.amount)%></td>
+    <td><%=info[list[i].status]%></td>
+    <td><% if(list[i].status == 'Pending'){ %> <div class="UIButton" data-events="click:cancelWithdraw" data-id="<%=list[i].proposalId%>"><div>取消</div></div> <% } %></td>
+</tr>
+<% } %>
+<% }else{ %>
+<tr><td colspan="5">暂无记录</td></tr>
+<% } %>

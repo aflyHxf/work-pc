@@ -1,0 +1,26 @@
+<div class="head">
+    <div class="container row">
+        <div class="col-left">
+            <a href="#home" class="logo"><img src="images/logo.png"></a>
+        </div>
+        <div class="col-right">
+            <nav class="nav-wrap" data-element="navNode">
+                <% var url = $tool().url(); var search = $tool().getSearch();%>
+                <a href="#home"  data-events="click: menuClickCount;"  class="nav switch <%if(url.hash=='home' || !url.hash){%>active<%}%>"><span>首页</span></a>
+                <a href="#promotions" class="nav switch <%if(url.hash=='promotions'){%>active<%}%>"><span>优惠</span></a>
+                <!-- <a href="#proxy" class="nav switch <%if(url.hash=='proxy'){%>active<%}%>"><span>赚钱分成</span></a> -->
+                <!-- <a href="#mobile" class="nav switch <%if(url.hash=='mobile'){%>active<%}%>"><span>手机版</span></a> -->
+                <a href="#alipay_manual?pid=transaction" class="nav switch <%if(search.pid=='transaction'){%>active<%}%>"><span>充值提款</span></a>
+                <a class="nav" pop="contact"><span>在线客服</span></a>
+            </nav>
+            <div class="col-right unLogin" data-element="unLoginNode">
+                <a data-events="click: registerClickCount;" class="btn btn-prime" pop="register">注册</a>
+                <a data-events="click: loginClickCount;" class="btn btn-prime" pop="login">登录</a>
+            </div>
+            <div class="col-right login" data-element="loginNode">
+                <a class="btn btn-prime" href="#overview?pid=1">账户中心</a>
+                <a class="btn btn-prime" data-events="click:logout;">退出</a>
+            </div>
+        </div>
+    </div>
+</div>

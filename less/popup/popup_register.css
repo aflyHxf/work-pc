@@ -1,0 +1,26 @@
+.popup-register .body {
+  padding-top: 0.98958333rem;
+  padding-bottom: 1.51041667rem;
+}
+.popup-register .body .validImg {
+  position: absolute;
+  right: 0.52083333rem;
+  top: 0.52083333rem;
+}
+.popup-register .body .UIButton {
+  width: auto;
+  position: absolute;
+  right: 0.52083333rem;
+  top: 0.52083333rem;
+}
+.popup-register .body .UIButton.disabled {
+  background-color: #666666;
+}
+.popup-register .body .UIButton > div {
+  padding-left: 0.20833333rem;
+  padding-right: 0.20833333rem;
+}
+.popup-register .submit {
+  display: block;
+  margin: 0 auto;
+}

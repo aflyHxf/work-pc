@@ -1,0 +1,39 @@
+<div class="popup-view" data-element="popupViewNode">
+    <div class="popup-container">
+        <div class="popup-wrap popup-default popup-withdrawal">
+            <div class="head"><p>申请提款</p><div class="right-side"><i class="icon icon-popup-close" data-events="click: close;"></i></div></div>
+            <div class="body row">
+                <form data-element="formNode">
+                    <div class="UI-input-box">
+                        <label><span>银行账号：</span></label>
+                        <div class="right-side bank-info">
+                            <i class="icon icon-card"></i>
+                            <span class="bn">中国工商银行</span>
+                            <span>尾号：7853</span>
+                            <div class="col-right">
+                                <a href="#personal">查看</a>
+                                <i class="arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="balance"><span>账户余额：</span></label>
+                        <div class="right-side">
+                            <input type="number" id="balance" value="<%=data.partner.credits%>" disabled>
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="amount"><span>提款金额：</span></label>
+                        <div class="right-side">
+                            <input type="number" id="amount" name="amount">
+                        </div>
+                    </div>
+                    <p>单笔提款金额最低500元 ，单笔限额20万元 ， 如您需要办理20万以上的提款金额 ， 请您分批提交 ， 感谢您的理解 ！</p>
+                    <div class="row">
+                        <input type="submit" class="submit" value="确认">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

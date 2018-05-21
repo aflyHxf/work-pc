@@ -1,0 +1,49 @@
+<% var user = $mcm().cache.getUserInfoFromCache(); %>
+<div class="page-transfer">
+    <div class="row">
+        <div class="l-block">
+            <div class="balance">本地余额：<strong v-param="overage"></strong>元</div>
+            <% if (data.getReward) { %>
+            <div class="promotion-progress">
+                <i class="icon icon-lock-gray"></i>
+                <span>优惠额度：<%=data.getReward.currentAmount%></span>
+                <div data-element="progressNode"></div>
+            </div>
+            <% } %>
+        </div>
+        <form class="r-block" data-element="formNode" data-events="submit: onSubmit;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>游戏大厅</th>
+                        <th>游戏状态</th>
+                        <th>游戏额度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i = 0; i < data.gamesInfo.length; i++) { %>
+                    <tr data-status="<%=data.gamesInfo[i].status%>">
+                        <td><%= data.gamesInfo[i].nickName || data.gamesInfo[i].name %>
+                          <!-- <input type="radio" name="providerId" id="radio-<%=i%>" value="<%=data.gamesInfo[i].providerId%>"> -->
+                        </td>
+                        <td><%=data.gamesInfo[i].status == 1 ? "正常" : "维护中"%></td>
+                        <td id="game-balance-<%=data.gamesInfo[i].providerId%>">正在加载...</td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <div class="UI-input-box">
+                <label for="method">操作方式:</label>
+                <div class="right-side">
+                    <select name="operation" id="method">
+                        <option value="0">转入到游戏</option>
+                        <option value="1">转出到本地</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row"><input type="submit" class="btn btn-submit" value="确定"></div>
+        </form>
+    </div>
+    <div class="tips">
+    </div>
+</div>

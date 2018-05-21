@@ -1,0 +1,42 @@
+.popup-headportrait {
+  width: 33.125rem;
+}
+.popup-headportrait .body {
+  padding: 1.71875rem 0rem;
+}
+.popup-headportrait .body .photos-group {
+  font-size: 0;
+  text-align: center;
+}
+.popup-headportrait .body .photos-group .row:first-child {
+  margin-bottom: 0.72916667rem;
+}
+.popup-headportrait .body .photo-box {
+  width: 4.58333333rem;
+  height: 4.58333333rem;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0rem 0.36458333rem;
+  position: relative;
+}
+.popup-headportrait .body .photo-box.active:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 4px solid #ffb400;
+  border-width: 0.20833333rem;
+  box-sizing: border-box;
+}
+.popup-headportrait .body .photo-box img {
+  display: block;
+  width: 100%;
+}
+.popup-headportrait .submit {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.82291667rem;
+}

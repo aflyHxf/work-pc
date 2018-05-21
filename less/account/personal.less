@@ -1,0 +1,93 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.page-personal {
+  color: #434343;
+  h2 {
+    .rem(font-size, 20px);
+    font-weight: bold;
+    .rem(margin-bottom, 36px);
+    text-align: center;
+  }
+  .blue {
+    color: #2a9cf9;
+  }
+  .mr30 {
+    .rem(margin-right, 30px);
+  }
+  .mb20 {
+    .rem(margin-bottom, 20px);
+  }
+  .mb15 {
+    .rem(margin-bottom, 15px);
+  }
+  .inner-row {
+    .rem(line-height, 32px);
+    .rem(margin-bottom, 12px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .form-node {
+    .rem(margin-bottom, 40px);
+    .rem(padding-left, 100px);
+    display: inline-block;
+    .inner-row label {
+      .rem(width, 140px);
+      float: left;
+    }
+    .UI-input-box {
+      .rem(height, 32px);
+      .rem(line-height, 32px);
+    }
+  }
+  .btn-submit {
+    .rem(width, 91px);
+    .rem(height, 29px);
+    color: #fff;
+    background: #2a9cf9;
+    .rem(border-radius, 4px);
+  }
+  .left-side {
+    .rem(width, 440px);
+  }
+  .inline {
+    display: inline-block;
+  }
+  .vertical-top {
+    vertical-align: top;
+  }
+  .vertical-bottom {
+    vertical-align: bottom;
+  }
+  .input-tab {
+    overflow: hidden;
+    table {
+      width: 100%;
+      table-layout: fixed;
+    }
+    td {
+      .rem2(padding, 0, 5px);
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+  input[type="checkbox"] {
+    .rem(width, 18px);
+    .rem(height, 18px);
+    vertical-align: middle;
+    & + label {
+      vertical-align: middle;
+      .rem2(margin, 0, 12px);
+    }
+  }
+  .checkbox-node {
+    display: inline-block;
+    vertical-align: middle;
+    .rem(margin-bottom, 20px);
+  }
+}

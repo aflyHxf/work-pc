@@ -1,0 +1,24 @@
+.page-commision {
+  color: #434343;
+}
+.page-commision .swiper-slide,
+.page-commision .results-tab {
+  width: 1040px;
+}
+.page-commision .tips {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.page-commision .tips span {
+  color: #ffbd00;
+}
+.page-commision table.row {
+  table-layout: fixed;
+}
+.page-commision table.row td {
+  padding-left: 0.52083333rem;
+}
+.page-commision table.row input,
+.page-commision table.row select {
+  width: 100%;
+}

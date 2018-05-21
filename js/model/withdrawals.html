@@ -1,0 +1,70 @@
+<%
+    var user = $mcm().cache.getUserInfoFromCache();
+%>
+<div class="page-transaction">
+    <div class="page-inner-wrapper">
+        <div class="page-switch-nav">
+            <a href="#wechatpay_manual?pid=transaction">充值</a>
+            <a href="#withdrawals?pid=transaction" class="active">提款</a>
+        </div>
+        <div class="page-inner-container">
+            <div class="content page-withdrawals">
+                <% if (user.bankAccount) { %>
+                <div class="input-row">
+                    <label for="">银行账号：</label>
+                    <div class="bank-info row">
+                        <i class="icon icon-radio"></i>
+                        <i class="icon icon-card"></i>
+                        <%
+                            var bankName;
+                            for (var i = 0; i < data.bankList.length; i++) {
+                                if (user.bankName == data.bankList[i].id )
+                                bankName = data.bankList[i].name
+                            }
+                        %>
+                        <span class="bank-name"><%=bankName%></span>
+                        <span>尾号：<%=user.bankAccount.slice(user.bankAccount.length-4, user.bankAccount.length);%></span>
+                        <div class="col-right">
+                            <a href="#personal"><span>查看</span><i class="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <form data-element="formNode">
+                            <div class="input-row"><label>可供提款金额：</label><span class="amount" v-param="overage">0.00</span></div>
+                            <div class="input-row">
+                                <label for="amount">提现金额：</label>
+                                <div class="UI-input-box"><input type="number" id="amount" name="amount" v-input="amount"></div>
+                            </div>
+                            <!--<div class="input-row">-->
+                                <!--<label for="isinform">是否通知：</label>-->
+                                <!--<input type="checkbox" id="isinform">-->
+                                <!--<span>短信通知</span>-->
+                            <!--</div>-->
+                            <div class="input-row">
+                                <label></label>
+                                <input type="submit" class="btn btn-submit" value="确认">
+                            </div>
+                        </form>
+                    </div>
+                    <% if(data.reward){ %>
+                    <div class="col-6">
+                        <div class="promotion-detail-wrapper">
+                            <i class="icon icon-lock-gray"></i>
+                            <span>优惠额度：<%=data.reward.currentAmount%></span>
+                            <div data-element="progressNode"></div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="footnote">
+                    <h5>温馨提示</h5>
+                    <p>捕鱼皇单笔提款申请最低100元，最高无上限，7x24小时随时提款，所有5万元以下提款将在5分钟内支付（银行维护等特殊情况除外）。单笔提款最高20万元，如果您想提款更多，请分成多次提交，谢谢您的理解与支持。 </p>
+                    <p>※会员单日首次提款免手续费，单日第2次（含）以上，每次手续费1%，每日24时重置。</p>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

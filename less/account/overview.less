@@ -1,0 +1,182 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.page-overview {
+  .rem(padding-top, 30px);
+  .blue {
+    color: #1880d5;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .mb30 {
+    .rem(margin-bottom, 30px);
+  }
+  .mr30 {
+    .rem(margin-right, 30px);
+  }
+  .middle {
+    vertical-align: middle;
+  }
+  .btn-prime {
+    .rem(width, 50px);
+    .rem(height, 30px);
+    .rem(line-height, 30px);
+    color: #fff;
+    background: @activeColor;
+    .rem(font-size, 14px);
+    text-decoration: none;
+  }
+  .section-title {
+    .rem(margin-bottom, 20px);
+    & > span {
+      .rem(font-size, 18px);
+      color: @activeColor;
+      font-weight: bold;
+      border-left: 4px solid @activeColor;
+      .rem(border-left-width, 4px);
+      .rem(padding-left, 10px);
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .amount-setting {
+    font-size: 0;
+    .rem(padding-left, 70px);
+    .rem(margin-top, -6px);
+    .amount {
+      .rem(font-size, 26px);
+      font-weight: bold;
+      color: @activeColor;
+      vertical-align: middle;
+      .rem(margin-right, 20px);
+    }
+    .btn-prime {
+      .rem2(margin, 0, 10px);
+    }
+    .tips-node {
+      display: inline-block;
+      vertical-align: middle;
+      .rem(margin-left, 10px);
+      &:hover span {
+        display: inline-block;
+      }
+      span {
+        display: none;
+        vertical-align: middle;
+        .rem(line-height, 26px);
+        background-color: #dcdcdc;
+        font-size: 12px;
+        color: @blackColor;
+        .rem2(padding, 0, 10px);
+        position: relative;
+        .rem(margin-left, 13px);
+        &:before {
+          content: '';
+          border: 13px solid transparent;
+          .rem(border-width, 13px);
+          border-right-color: #dcdcdc;
+          position: absolute;
+          right: 100%;
+          top: 0;
+        }
+      }
+    }
+  }
+  .section-wrapper {
+    width: 100%;
+    .rem(font-size, 14px);
+    .rem(margin-bottom, 20px);
+    color: @blackColor;
+  }
+  .section-table {
+    th {
+      background-color: #c9e5fc;
+    }
+    th, td {
+      .rem(line-height, 50px);
+      text-align: center;
+    }
+    td {
+      border-bottom: 1px solid #dcdcdc;
+      &:first-child {
+        border-left: 1px solid #dcdcdc;
+      }
+      &:last-child {
+        border-right: 1px solid #dcdcdc;
+      }
+    }
+  }
+  .section-promotion-information {
+    .section-head {
+      background-color: #c9e5fc;
+      .rem(line-height, 50px);
+      .rem2(padding, 0, 20px);
+    }
+    .section-body {
+      border: 1px solid #dcdcdc;
+      border-top: none;
+      .rem2(padding, 16px, 22px);
+    }
+    .label-progress {
+      vertical-align: text-bottom;
+      .rem(margin-right, 10px);
+    }
+    .progress-wrapper {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .UI-progress {
+      .rem(width, 435px);
+      .line-current .circle-group {
+        .rem(width, 435px);
+      }
+    }
+    .active-promotion {
+      display: inline-block;
+      vertical-align: middle;
+      a {
+        text-decoration: underline;
+      }
+    }
+    .label {
+      color: #fff;
+      font-size: 12px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 60px;
+      height: 16px;
+      line-height:16px;
+      position: relative;
+      text-align: center;
+      .rem(margin-left, 20px);
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: @activeColor;
+        -webkit-transform: skewX(-20deg);
+        -moz-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+        -o-transform: skewX(-20deg);
+        transform: skewX(-20deg);
+      }
+      span {
+        z-index: 10;
+        position: relative;
+      }
+    }
+    .btn-normal {
+      .rem(width, 90px);
+      .rem(height, 30px);
+      .rem(line-height, 28px);
+      border: 1px solid #bfbfbf;
+      border-radius: 4px;
+      color: @blackColor;
+      background: linear-gradient(to top, #dbebf9, #ffffff);
+    }
+  }
+}

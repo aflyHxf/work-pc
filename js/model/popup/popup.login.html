@@ -1,0 +1,41 @@
+<div class="popup-view" data-element="popupViewNode">
+    <div class="popup-container">
+        <div class="popup-wrap popup-default popup-login">
+            <div class="head"><p>登录账号</p><div class="right-side"><i class="icon icon-popup-close" data-events="click: close;"></i></div></div>
+            <div class="body">
+                <form data-element="formNode">
+                    <div class="UI-input-box">
+                        <label for="username"><i class="icon icon-controller"></i><span>游戏账号:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="username" name="name" v-input="name">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="password"><i class="icon icon-lock"></i><span>游戏密码:</span></label>
+                        <div class="right-side">
+                            <input type="password" id="password" name="password" v-input="password">
+                        </div>
+                    </div>
+                    <div class="UI-input-box" style="display: none" data-element="captchaNode">
+                        <label for="captcha"><i class="icon icon-shield"></i><span>验证码:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="captcha" name="captcha" placeholder="请填写4位验证码" v-input="captcha">
+                            <img src="" alt="" data-element="validImg" class="validImg" data-events="click:checkValidCode;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" class="submit" value="登录">
+                    </div>
+                </form>
+                <div class="row foot">
+                    <div class="col-4">
+                        <a data-events="click: openRegisterPopup;">注册账号</a>
+                    </div>
+                    <div class="col-4">
+                        <a target="_blank" href="<%=data.getPlatformDetails.csUrl%>" >忘记密码</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

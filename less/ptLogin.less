@@ -1,0 +1,97 @@
+@import (reference) "variable";
+@import (reference) "icon";
+
+.ptLogin{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: table;
+  .table-cell{
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #1e8feb;
+    .area{
+      width: 1024px;
+      height: 690px;
+      margin: 0 auto;
+      background: url('../images/ptLogin.jpg')no-repeat center;
+      padding:166px 0;
+      .content{
+        width: 470px;
+        height: 358px;
+        background-color: #189def;
+        margin: 0 auto;
+        border-radius: 10px;
+        .logo{
+          overflow: hidden;
+          img{
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        table{
+          position: relative;
+          margin-top: -80px;
+          width: 100%;
+          height: 240px;
+          td{
+            padding-top: 5px;
+            padding-bottom: 5px;
+          }
+          .move{
+            position: relative;
+            margin-top:-50px;
+          }
+          .text{
+            position: relative;
+            margin: 0 auto;
+            width: 384px;
+            height: 42px;
+            text-align: center;
+            label{
+              font-size: 20px;
+              color: #fff;
+              display: inline-block;
+              height: 42px;
+              line-height: 42px;
+              width: 100px;
+            }
+            .UI-Input{
+              width: 284px;
+              height: 42px;
+              background-color: #1b1b1b;
+              border-radius: 5px;
+              color: #fff;
+              font-size: 20px;
+            }
+            .validImg{
+              position: absolute;
+              right: 6px;
+              top: 6px;
+            }
+            &:last-child{
+              .UI-Input{
+                text-align: left;
+                text-indent: 20px;
+              }
+            }
+          }
+          .submit{
+            background: none;
+            border: none;
+            cursor: pointer;
+            .icon;
+            .icon-btn-login;
+            display: block;
+            margin: 0 auto;
+            &:hover{
+              .icon-btn-login-active();
+            }
+          }
+        }
+      }
+    }
+  }
+}

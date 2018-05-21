@@ -1,0 +1,28 @@
+<%
+    var parent = $getCommonVal();
+    var promotion = data.promotion;
+    var promoConfig = data.promoConfig.activity;
+    var promotionKeys = parent.Object.keys(promotion);
+%>
+<div class="page-promotions">
+    <div class="page-inner-wrapper">
+        <ul class="promotions-list">
+            <% for (var i = 0; i < promotionKeys.length; i++) { %>
+            <li>
+                <div class="promotion-banner">
+                    <img src="<%=promoConfig[promotionKeys[i]].img%>">
+                </div>
+                <div class="promotion-title row">
+                    <div class="col-left">
+                        <h2><%=promoConfig[promotionKeys[i]].name%></h2>
+                    </div>
+                    <div class="col-right">
+                        <button class="btn btn-prime">详情</button>
+                    </div>
+                </div>
+                <div class="promotion-article-wrapper"><div class="inner"><%==promotion[promotionKeys[i]]%></div></div>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</div>

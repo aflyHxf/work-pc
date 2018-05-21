@@ -1,0 +1,71 @@
+<% if(playerCommissions && playerCommissions.length > 0){ %>
+<% var a = 0,b = 0,c = 0,d = 0,e = 0,f = 0,g = 0 %>
+<% for(var i = 0,len = playerCommissions.length;i < len;i++){ %>
+<% a += playerCommissions[i].totalTopUpAmount%>
+<% b += playerCommissions[i].totalPlayerBonusAmount%>
+<% c += playerCommissions[i].operationAmount%>
+<% d += playerCommissions[i].totalRewardAmount%>
+<% e += playerCommissions[i].platformFee%>
+<% f += playerCommissions[i].serviceFee%>
+<% g += playerCommissions[i].profitAmount%>
+<tr>
+    <td><%=playerCommissions[i].playerName%></td>
+    <td><%=playerCommissions[i].totalTopUpAmount.toFixed(2)%></td>
+    <td><%=playerCommissions[i].totalPlayerBonusAmount.toFixed(2)%></td>
+    <td><%=playerCommissions[i].operationAmount.toFixed(2)%></td>
+    <td><%=playerCommissions[i].totalRewardAmount.toFixed(2)%></td>
+    <td><%=playerCommissions[i].platformFee.toFixed(2)%></td>
+    <td><%=playerCommissions[i].serviceFee.toFixed(2)%></td>
+    <td><%=playerCommissions[i].profitAmount.toFixed(2)%></td>
+</tr>
+<% } %>
+<tr>
+    <td>小计：</td>
+    <td><%=a.toFixed(2)%></td>
+    <td><%=b.toFixed(2)%></td>
+    <td><%=c.toFixed(2)%></td>
+    <td><%=d.toFixed(2)%></td>
+    <td><%=e.toFixed(2)%></td>
+    <td><%=f.toFixed(2)%></td>
+    <td><%=g.toFixed(2)%></td>
+</tr>
+<% }else{ %>
+<tr>
+    <td colspan="8">
+        暂无信息
+    </td>
+</tr>
+<tr>
+    <td>小计：</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<% } %>
+<% if(total){ %>
+<tr>
+    <td>总计：</td>
+    <td><%=total.totalTopUpAmount.toFixed(2)%></td>
+    <td><%=total.totalPlayerBonusAmount.toFixed(2)%></td>
+    <td><%=total.operationAmount.toFixed(2)%></td>
+    <td><%=total.totalRewardAmount.toFixed(2)%></td>
+    <td><%=total.platformFee.toFixed(2)%></td>
+    <td><%=total.serviceFee.toFixed(2)%></td>
+    <td><%=total.profitAmount.toFixed(2)%></td>
+</tr>
+<% }else{ %>
+<tr>
+    <td>总计：</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<% } %>

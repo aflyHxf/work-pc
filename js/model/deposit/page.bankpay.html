@@ -1,0 +1,84 @@
+<%
+    var business = $business();
+    var depositedOrderInfo = data.topupRequest ? data.topupRequest.data : false;
+%>
+<div class="page-bankpay">
+    <div class="tips-node"><span>友情提示：</span>提交存款申请后，系统将自动显示最新收款帐户，您可使用网银转帐、ATM自动柜员机、银行人工柜台存款至我们指定的收款帐户。</div>
+    <div class="p32">
+        <form class="submit-form " data-element="formNode">
+            <div class="input-row">
+                <label for="depositMode">付款方式：</label>
+                <div class="UI-input-box">
+                    <select id="depositMode" name="depositMethod" data-events="change:loadFilter">
+                        <% for (var i = 0; i < business.depositMethod.length; i++) { %>
+                        <option value="<%=i%>" <%if(depositedOrderInfo && (depositedOrderInfo.depositMethod == i)){%>selected="selected"<%}%>><%=business.depositMethod[i]%></option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+            <div class="input-row" id="bankAccountTypeDiv">
+                <label for="bankAccountType">收款银行：</label>
+                <div class="UI-input-box">
+                    <select id="bankAccountType" name="bankTypeId">
+                        <option></option>
+                        <%
+                        data.bankListData.forEach(function(item){
+                        %>
+                          <option value="<%=item.id%>" <%if(depositedOrderInfo && (depositedOrderInfo.bankTypeId == item.id)){%>selected="selected"<%}%>><%=item.name%></option>
+                            <!-- <%=item.name%></option> -->
+                        <%
+                          })
+                        %>
+                    </select>
+                </div>
+            </div>
+            <div class="input-row">
+                <label for="lastBankcardNo">付款账号：</label>
+                <div class="UI-input-box"><input type="text" name="lastBankcardNo" id="lastBankcardNo" maxlength="3" placeholder="账号后3位" value="<%=depositedOrderInfo ? depositedOrderInfo.lastBankcardNo : ''%>"></div>
+            </div>
+            <div class="input-row">
+                <label for="realName">付款姓名：</label>
+                <div class="UI-input-box"><input type="text" id="realName" name="realName" value="<%=depositedOrderInfo ? depositedOrderInfo.realName : ''%>"></div>
+            </div>
+            <div class="input-row address-node" data-element="addressNode">
+                <label for="Province">存款网点：</label>
+                <div class="UI-input-box"><select id="province" name="provinceId"></select></div>
+                <div class="UI-input-box"><select id="city" name="cityId"></select></div>
+                <div class="UI-input-box"><select id="area" name="districtId"></select></div>
+            </div>
+            <div class="input-row">
+                <label for="amount">存款金额：</label>
+                <div class="UI-input-box max-width"><input type="number" id="amount" name="amount" value="<%=depositedOrderInfo ? depositedOrderInfo.amount : ''%>"></div>
+            </div>
+            <button class="btn btn-submit">提交</button>
+        </form>
+        <div class="results-view" data-element="resultNode">
+            <div class="row">
+                <div class="col-left">
+                    <ul class="order-details">
+                        <li><span class="label">单号 :</span><span v-param="proposalId"></span></li>
+                        <li><span class="label">时间：</span><span v-param="createTime"></span></li>
+                        <li><span class="label">金额：</span><span v-param="amount" class="blue"></span></li>
+                        <li><span class="label">有效：</span><span v-param="validTime" class="blue"></span></li>
+                        <li><span class="label">状态：</span><span v-param="status" class="blue"></span></li>
+                        <li>
+                            <span class="label">操作：</span>
+                            <button class="btn btn-submit" data-events="click: cancelOrder;">取消</button>
+                            <button class="btn btn-submit" data-events="click: applyCheckAgain;">调整</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-right">
+                    <div class="payment-node">
+                        <h5>捕鱼皇收款银行信息</h5>
+                        <div class="p20">
+                            <p><span>银行类型:</span><span class="bold" v-param="payeeBankType"></span></p>
+                            <p><span>开户户名:</span><span class="bold" v-param="payeeName"></span></p>
+                            <p><span>银行账号:</span><span class="bold" v-param="payeeCardNo"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

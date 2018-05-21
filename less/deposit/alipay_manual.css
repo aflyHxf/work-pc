@@ -1,0 +1,82 @@
+.page-alipay-manual .pl145 {
+  padding-left: 7.55208333rem;
+}
+.page-alipay-manual .pt40 {
+  padding-top: 2.08333333rem;
+}
+.page-alipay-manual .input-row {
+  margin-bottom: 1.25rem;
+  height: 1.66666667rem;
+  line-height: 1.66666667rem;
+}
+.page-alipay-manual .input-row label {
+  width: 5.36458333rem;
+}
+.page-alipay-manual .input-row .UI-input-box {
+  width: 7.8125rem;
+  height: 1.66666667rem;
+}
+.page-alipay-manual .input-row .tips {
+  font-size: 0.625rem;
+  padding-left: 0.83333333rem;
+}
+.page-alipay-manual .submit-form .btn-submit {
+  margin-left: 5.46875rem;
+}
+.page-alipay-manual .results-view .records-list {
+  margin-top: 1.19791667rem;
+  margin-bottom: 1.19791667rem;
+  font-size: 0.72916667rem;
+  width: 100%;
+}
+.page-alipay-manual .results-view .records-list th {
+  font-weight: bold;
+  border-bottom: 1px solid #dcdcdc;
+}
+.page-alipay-manual .results-view .records-list th,
+.page-alipay-manual .results-view .records-list td {
+  text-align: center;
+  line-height: 2.08333333rem;
+}
+.page-alipay-manual .results-view .blue {
+  color: #1e8fea;
+}
+.page-alipay-manual .results-view .payment-node {
+  width: 15.625rem;
+  height: 18.75rem;
+  background-color: #eee;
+  display: inline-block;
+}
+.page-alipay-manual .results-view .payment-node h5 {
+  background-color: #1e8fea;
+  line-height: 3.64583333rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.page-alipay-manual .results-view .payment-node .payment-content {
+  height: 10.83333333rem;
+  line-height: 10.83333333rem;
+}
+.page-alipay-manual .results-view .payment-node .foot p {
+  color: #434343;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  text-align: left;
+  padding: 0rem 0.83333333rem;
+}
+.page-alipay-manual .results-view .payment-node .qr-code {
+  height: 7.91666667rem;
+  line-height: 7.91666667rem;
+  vertical-align: middle;
+}
+.page-alipay-manual .results-view .payment-node .payment-info {
+  font-weight: bold;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  padding: 0rem 0.52083333rem;
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+}

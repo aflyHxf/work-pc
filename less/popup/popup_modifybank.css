@@ -1,0 +1,27 @@
+.popup-modifybank .body {
+  padding-top: 1.04166667rem;
+  font-size: 3px;
+}
+.popup-modifybank .submit {
+  margin: 0 auto 20px;
+}
+.popup-modifybank .right-side {
+  position: relative;
+}
+.popup-modifybank .send-code {
+  position: absolute;
+  top: 0;
+  right: 0.52083333rem;
+}
+.popup-modifybank .send-code .btn-prime {
+  font-size: 0.72916667rem;
+  width: 4.6875rem;
+  height: 1.5625rem;
+  line-height: 1.5625rem;
+  border-radius: 0.78125rem;
+  background: #117fd7;
+  color: #fff;
+}
+.popup-modifybank .send-code .disabled {
+  background-color: #666666;
+}

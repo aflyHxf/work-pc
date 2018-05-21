@@ -1,0 +1,110 @@
+.page-transfer {
+  color: #434343;
+}
+.page-transfer .l-block {
+  width: 12.5rem;
+  height: 19.16666667rem;
+  padding: 2.08333333rem 0.625rem 0rem;
+  background-color: #eeeeee;
+  font-size: 0.9375rem;
+  float: left;
+}
+.page-transfer .l-block .promotion-progress {
+  float: right;
+  width: 11.35416667rem;
+  height: 5.20833333rem;
+  background: #fff;
+  padding: 1.04166667rem 0.78125rem 0.78125rem;
+  color: #7b7a7a;
+  margin-top: 1.45833333rem;
+}
+.page-transfer .r-block {
+  text-align: center;
+  font-size: 0.72916667rem;
+  float: right;
+  width: 26.5625rem;
+  height: 19.16666667rem;
+  background: #eee;
+}
+.page-transfer .r-block table {
+  width: 100%;
+  background: #eee;
+  table-layout: fixed;
+  margin-bottom: 1.5625rem;
+}
+.page-transfer .r-block table th {
+  font-weight: bold;
+}
+.page-transfer .r-block table th,
+.page-transfer .r-block table td {
+  text-align: center;
+  line-height: 2.08333333rem;
+  vertical-align: middle;
+}
+.page-transfer .r-block table tbody tr {
+  cursor: pointer;
+}
+.page-transfer .r-block table tbody tr:hover {
+  background: #9bd2ff;
+  color: #fff;
+}
+.page-transfer .r-block table tbody tr.active {
+  background-color: #1e8fea;
+  color: #fff;
+}
+.page-transfer .r-block table tbody tr.active td:first-child:before {
+  opacity: 1;
+}
+.page-transfer .r-block table td:first-child {
+  text-align: left;
+}
+.page-transfer .r-block table td:first-child:before {
+  content: "";
+  font-size: 1rem;
+  background-image: url('../images/sprite.png');
+  background-size: 11.77083333em 93.85416667em;
+  background-position: 0em -2.13541667em;
+  width: 1.09375em;
+  height: 1.09375em;
+  margin: 0rem 0.9375rem;
+  opacity: 0;
+}
+.page-transfer .r-block table td:last-child {
+  text-align: right;
+  padding-right: 2.91666667rem;
+}
+.page-transfer .r-block .UI-input-box {
+  width: 21.35416667rem;
+  height: 1.5625rem;
+  line-height: 1.5625rem;
+  margin-bottom: 0.52083333rem;
+  background: none;
+  display: inline-block;
+}
+.page-transfer .r-block .UI-input-box label {
+  width: 4.27083333rem;
+}
+.page-transfer .r-block .UI-input-box .right-side {
+  height: 100%;
+}
+.page-transfer .r-block .btn-submit {
+  width: 4.6875rem;
+  height: 1.5625rem;
+  background: #1e8fea;
+  color: #fff;
+  border-radius: 4px;
+}
+.page-transfer .r-block input[type="radio"] {
+  opacity: 0;
+}
+.page-transfer .tips {
+  margin-top: 2.08333333rem;
+  font-size: 0.72916667rem;
+  color: #434343;
+  line-height: 1.25rem;
+}
+.page-transfer .tips h5 {
+  font-size: 0.9375rem;
+  margin-bottom: 0.9375rem;
+  font-weight: bold;
+}

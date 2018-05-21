@@ -1,0 +1,37 @@
+<% var win = $getCommonVal() %>
+<% var tool = $tool()%>
+<div class="page-mailbox">
+    <ul class="messages-list" data-element="listNode">
+        <% $console(data.mail)%>
+        <li>
+            <div class="message-title"><i class="icon icon-email-blue"></i><span>系统消息</span></div>
+        </li>
+        <% if(data.mail.length > 0){ %>
+            <% for(var i = 0,len = data.mail.length;i < len;i++ ){%>
+                <li class="slide" index=<%=i%> >
+                    <div class="message-title row">
+                        <% if(!data.mail[i].hasBeenRead){ %>
+                            <i class="m-point">●</i>
+                        <% } %>
+                        <span><%=data.mail[i].title%></span>
+                        <div class="col-right">
+                            <span><%=tool.transferDateToString(new win.Date(data.mail[i].createTime))%></span>
+                        </div>
+                    </div>
+                    <div class="message-content">
+                        <div class="view">
+                            <p><%=data.mail[i].content%></p>
+                        </div>
+                        <div class="message-delete" index=<%=i%> >
+                            <img src="../../../images/trash.png" alt="">
+                        </div>
+                    </div>
+                </li>
+            <% } %>
+        <% }else{ %>
+        <li class="notice">
+            暂无消息
+        </li>
+        <% } %>
+    </ul>
+</div>

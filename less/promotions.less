@@ -1,0 +1,122 @@
+@import (reference) "variable";
+@import (reference) "icon";
+
+.page-promotions {
+  background: url("../images/promotions-banner.jpg") no-repeat center top;
+  color: @blackColor;
+  .rem(background-size, 1920px);
+  .rem(padding-top, 220px);
+  .bold {
+    font-weight: bold;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .mt40 {
+    .rem(margin-top, 40px);
+  }
+  .mb70 {
+    .rem(margin-bottom, 70px);
+  }
+  .w740 {
+    .rem(width, 740px);
+  }
+  .pl150 {
+    .rem(padding-left, 150px);
+  }
+  .promotion-banner {
+    .rem(height, 220px);
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .promotions-list {
+    background-color: #fff;
+  }
+  .promotion-title {
+    .rem(height, 80px);
+    .rem(line-height, 80px);
+    .rem2(padding, 0, 22px);
+    border-bottom: 1px solid #133773;
+    h2 {
+      .rem(font-size, 24px);
+      font-weight: bold;
+    }
+    .btn-prime {
+      .rem(width, 90px);
+      .rem(height, 40px);
+      .rem(line-height, 40px);
+      .rem(border-radius, 4px);
+      background-color: #1e8fea;
+      color: #fff;
+    }
+  }
+  .promotion-article-wrapper {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -ms-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s;
+    .inner {
+      .rem3(padding, 0, 60px, 80px);
+    }
+    h4 {
+      .rem(margin-top, 38px);
+      .rem(line-height, 43px);
+      .rem(font-size, 30px);
+      .rem(padding-left, 6px);
+      .rem(border-left-width, 4px);
+      border-style: solid;
+      border-color: #1e8fea;
+      font-weight: bold;
+    }
+    p {
+      .rem(line-height, 30px);
+    }
+    &.slideDown {
+      max-height: 1200px;
+    }
+  }
+  table {
+    border: 1px solid @blackColor;
+    margin: 0 auto;
+    .rem(font-size, 18px);
+    .rem(line-height, 40px);
+    th {
+      .rem(line-height, 66px);
+      .rem(font-size, 24px);
+      text-align: center;
+      font-weight: bold;
+    }
+    th, td {
+      border-right: 1px solid #dcdcdc;
+      border-bottom: 1px solid #dcdcdc;
+      &:last-child {
+        border-right: none;
+      }
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+  .section-title {
+    font-weight: bold;
+  }
+  .btn-submit {
+    background: none;
+    border: none;
+    .icon;
+    .icon-submit;
+    .rem(font-size, 18px);
+    color: #fff;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+    margin: 40px auto 0;
+  }
+}

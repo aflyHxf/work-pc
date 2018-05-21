@@ -1,0 +1,30 @@
+.page-alipay .page-wechatpay .img-scan {
+  background: url("../images/scan-qr.png") no-repeat center;
+  width: 5.67708333rem;
+  height: 4.01041667rem;
+  display: block;
+  margin-top: 6.09375rem;
+  margin-bottom: 1.25rem;
+  margin: 6.09375rem 0rem 1.25rem 4.21875rem;
+}
+.page-alipay .page-wechatpay .scan-wechat {
+  margin-top: 3.95833333rem;
+}
+.page-alipay .page-wechatpay .input-row label {
+  width: 4.63541667rem;
+}
+.page-alipay .page-wechatpay .input-row .UI-input-box {
+  width: 10.41666667rem;
+}
+.page-alipay .page-wechatpay .submit-form .btn-submit {
+  margin: 1.5625rem 7.29166667rem 0rem;
+}
+.page-alipay .page-wechatpay .results-view ul {
+  margin-top: 2.08333333rem;
+}
+.page-alipay .page-wechatpay .results-view li {
+  padding-left: 10.10416667rem;
+}
+.page-alipay .page-wechatpay .footnote {
+  margin-top: 3.125rem;
+}

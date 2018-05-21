@@ -1,0 +1,91 @@
+.popup-default {
+  width: 26.04166667rem;
+  background: #fff;
+  border-radius: 1.04166667rem;
+}
+.popup-default .head {
+  height: 3.64583333rem;
+  line-height: 3.64583333rem;
+  background: url("../images/popup-head-left.png") no-repeat left, url("../images/popup-head-right.png") no-repeat right;
+  background-size: 1.5625rem;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.popup-default .head:before {
+  content: '';
+  position: absolute;
+  left: 1.35416667rem;
+  right: 1.35416667rem;
+  height: 100%;
+  top: 0;
+  background: url("../images/popup-head-middle.png") repeat-x;
+  background-size: 1.5625rem;
+}
+.popup-default .head .right-side {
+  position: absolute;
+  right: 0.78125rem;
+  top: 0;
+}
+.popup-default .head .icon {
+  cursor: pointer;
+}
+.popup-default .head p {
+  position: relative;
+}
+.popup-default .body {
+  padding: 0rem 1.30208333rem;
+}
+.popup-default .right-side img {
+  position: absolute;
+  top: 0.52083333rem;
+  right: 0.52083333rem;
+}
+.popup-default .UI-input-box {
+  margin-bottom: 1.04166667rem;
+  height: 2.60416667rem;
+  line-height: 2.60416667rem;
+}
+.popup-default .UI-input-box label {
+  width: 6.51041667rem;
+  font-size: 0;
+  color: #434343;
+  font-weight: bold;
+}
+.popup-default .UI-input-box label span {
+  font-size: 0.83333333rem;
+  width: 3.64583333rem;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 0.52083333rem;
+  text-align: justify;
+  text-align-last: justify;
+  white-space: nowrap;
+}
+.popup-default .UI-input-box label b {
+  font-size: 0.83333333rem;
+  vertical-align: middle;
+}
+.popup-default .UI-input-box input {
+  height: 2.60416667rem;
+}
+.popup-default .UI-input-box input::-webkit-input-placeholder {
+  font-size: 0.625rem;
+  color: #898989;
+}
+.popup-default .submit {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  background-image: url('../images/sprite.png');
+  background-size: 11.77083333em 93.85416667em;
+  background-position: 0em -54.16666667em;
+  width: 10.3125em;
+  height: 3.02083333em;
+  font-size: 0.9375rem;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+}

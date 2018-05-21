@@ -1,0 +1,88 @@
+@import (reference) "variable";
+@import (reference) "icon";
+
+.page-withdrawals {
+  .rem2(padding, 38px, 162px);
+  min-height: 400px;
+  .input-row {
+    .rem(height, 32px);
+    .rem(margin-bottom, 45px);
+    label {
+      .rem(line-height, 32px);
+      .rem(height, 32px);
+      .rem(font-size, 14px);
+      font-weight: bold;
+      .rem(width, 140px);
+      .rem(padding-right, 32px);
+      text-align: right;
+      float: left;
+    }
+    span, input {
+      .height(32px);
+      .line-height(32px);
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+  .UI-input-box {
+    height: 100%;
+  }
+  .bank-info {
+    .rem(width, 490px);
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    background: #dcdcdc;
+    .rem(border-radius, 2px);
+    .rem2(padding, 0, 10px);
+    .icon-card {
+      .rem2(margin, 0, 10px);
+    }
+    .bank-name {
+      .rem(font-size, 18px);
+      color: #1e8fea;
+      font-weight: bold;
+      .rem(margin-right, 10px);
+    }
+    span {
+      vertical-align: middle;
+      color: #434343;
+    }
+    .arrow-right {
+      display: inline-block;
+      border: 0 solid transparent;
+      .rem(border-width, 6px);
+      border-left-color: @blackColor;
+      vertical-align: middle;
+      .rem(margin-left, 5px);
+    }
+  }
+  .btn-submit {
+    .rem(width, 70px);
+    .rem(height, 30px);
+    .rem(line-height, 30px);
+    background-color: #1e8fea;
+    .rem(font-size, 14px);
+    color: #fff;
+    .rem(border-radius, 4px);
+  }
+  .footnote {
+    color: @blackColor;
+    .rem(font-size, 14px);
+    h5 {
+      font-weight: bold;
+      .rem(margin-bottom, 5px);
+    }
+    p {
+      .rem(line-height, 30px);
+    }
+  }
+  .promotion-detail-wrapper {
+    float: right;
+    .rem(width, 218px);
+    .rem(height, 100px);
+    background: #dcdcdc;
+    .rem3(padding, 20px, 15px, 15px);
+    color: #7b7a7a;
+  }
+}

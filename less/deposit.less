@@ -1,0 +1,123 @@
+@import (reference) "variable";
+@import (reference) "icon";
+
+.page-deposit {
+  overflow: hidden;
+  position: relative;
+  .left-sidebar {
+    //.rem(width, 199px);
+    width: 199px;
+    .rem3(padding, 64px, 0, 100px);
+    background: #eee;
+    .rem(line-height, 60px);
+    position: absolute;
+    left: 0;
+    height: 100%;
+    a {
+      display: block;
+      color: @blackColor;
+      .font-size(12px);
+      text-decoration: none;
+      .rem(padding-left, 16px);
+      &.active, &:hover {
+        background: #fff;
+        font-weight: bold;
+      }
+    }
+    span {
+      vertical-align: middle;
+      .rem(margin-left, 11px);
+    }
+  }
+  .main-content {
+    .rem4(padding, 38px, 20px, 38px,0);
+    padding-left:237px;
+    .rem(min-height, 450px);
+  }
+  .tips-node {
+    .rem(line-height, 30px);
+    border: 1px dashed #61b1f1;
+    background-color: @lightBlueColor;
+    .rem(font-size, 14px);
+    .rem2(padding, 0, 20px);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    &:before {
+      content: "";
+      left: 0;
+      .rem(top, -14px);
+      position: absolute;
+      .rem(border-width, 14px);
+      border-style: solid;
+      border-color: transparent;
+      border-left-color: #1e8fea;
+    }
+    span {
+      color: #1e8fea;
+    }
+  }
+  .p32 {
+    .rem2(padding, 0, 32px);
+  }
+  .input-row {
+    .rem(line-height, 50px);
+    .rem(height, 50px);
+    overflow: hidden;
+    label {
+      float: left;
+      color: @blackColor;
+      .rem(font-size, 14px);
+      font-weight: bold;
+    }
+    .UI-input-box {
+      .rem(height, 50px);
+      .rem(border-radius, 4px);
+      float: left;
+    }
+    input {
+      .rem(font-size, 14px);
+      color: @blackColor;
+      .rem(padding, 10px);
+    }
+  }
+  .btn-submit {
+    .rem(width, 90px);
+    .rem(height, 30px);
+    .rem(line-height, 30px);
+    background-color: #1e8fea;
+    .rem(font-size, 14px);
+    color: #fff;
+    .rem(border-radius, 4px);
+  }
+  .footnote {
+    color: @blackColor;
+    .rem(font-size, 14px);
+    h5 {
+      font-weight: bold;
+      .rem(margin-bottom, 5px);
+    }
+    p {
+      .rem(line-height, 30px);
+    }
+  }
+  .order-details {
+    .rem(font-size, 18px);
+    .label {
+      .rem(font-size, 14px);
+      color: @blackColor;
+      font-weight: bold;
+      display: inline-block;
+      .rem(width, 72px);
+    }
+    li {
+      .rem(line-height, 52px);
+    }
+    span {
+      vertical-align: middle;
+    }
+    .blue {
+      color: #1e8fea;
+    }
+  }
+}

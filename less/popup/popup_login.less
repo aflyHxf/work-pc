@@ -1,0 +1,43 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.popup-login {
+  &:before {
+    content: "";
+    position: absolute;
+    background: url("../images/popup-login-widget.png");
+    background-size: 100%;
+    .rem(width, 221px);
+    .rem(height, 321px);
+    .rem(top, 171px);
+    .rem(right, -130px);
+    z-index: 10;
+    pointer-events: none;
+  }
+  .body {
+    .rem(padding-top, 40px);
+    .rem(padding-bottom, 35px);
+  }
+  .submit {
+    margin: 0 auto;
+    .rem(margin-top, 18px);
+  }
+  .right-side{
+    img{
+      .right(25px);
+    }
+  }
+  .foot {
+    .rem(width, 350px);
+    margin: 0 auto;
+    a {
+      .rem(font-size, 14px);
+      color: @blackColor;
+      line-height: 100%;
+      .rem(margin-top, 16px);
+      display: block;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

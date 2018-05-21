@@ -1,0 +1,101 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.popup-contact {
+  border-radius: 0;
+  .rem(width, 760px);
+  .rem2(padding, 0, 20px);
+  .lh45 {
+    .rem(line-height, 45px);
+  }
+  .popup-title {
+    .rem(height, 100px);
+    .rem(line-height, 102px);
+    text-align: center;
+    color: #1e8fea;
+    .rem(font-size, 30px);
+    font-weight: bold;
+    .icon {
+      position: absolute;
+      .rem(top, 20px);
+      .rem(right, 20px);
+      cursor: pointer;
+    }
+  }
+  .popup-body {
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    font-size: 0;
+    .rem(padding-top, 35px);
+    .rem(padding-bottom, 100px);
+  }
+  .contact-block {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    color: #1e8fea;
+    text-align: left;
+    .rem2(padding, 0, 25px);
+    cursor: pointer;
+    p {
+      .rem(font-size, 18px);
+      font-weight:bold;
+    }
+    span {
+      .rem(font-size, 14px);
+      display: block;
+      .rem(max-width, 80px);
+      white-space: nowrap;
+    }
+    a {
+      color: #1e8fea;
+    }
+  }
+  .popup-footer {
+    text-align: left;
+    .contact-block {
+      display: block;
+      .rem(line-height, 78px);
+      .rem(width, 210px);
+    }
+    form {
+      display: block;
+      .rem(padding-left, 25px);
+    }
+    .UI-input-box {
+      margin: 0;
+      .rem(width, 200px);
+      .rem(height, 30px);
+      .rem(font-size, 18px);
+      .rem(margin-right, 13px);
+      font-weight: bold;
+      display: inline-block;
+      input {
+        height: 100%;
+        .rem2(padding, 0, 15px);
+        .rem(font-size, 18px);
+        color: #434343;
+      }
+    }
+    .code {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      .rem(width, 80px);
+    }
+    .btn-submit {
+      .rem(width, 90px);
+      .rem(height, 30px);
+      .rem(font-size, 14px);
+      color: #fff;
+      background-color: #1e8fea;
+      vertical-align: top;
+    }
+    .tips {
+      .rem2(margin, 20px, 0);
+      .rem2(padding, 0, 25px);
+      .rem(font-size, 14px);
+    }
+  }
+}

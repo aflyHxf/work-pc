@@ -1,0 +1,57 @@
+<div class="popup-view" data-element="popupViewNode">
+    <div class="popup-container">
+        <div class="popup-wrap popup-default popup-register">
+            <div class="head"><p>申请下级账号</p><div class="right-side"><i class="icon icon-popup-close" data-events="click: close;"></i></div></div>
+            <div class="body">
+                <form data-element="formNode">
+                    <div class="UI-input-box">
+                        <label for="account"><i class="icon icon-controller"></i><span>申请账号:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="account" name="name" placeholder="6到15个字符，由小写英文字母或数字组成">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="password"><i class="icon icon-lock"></i><span>申请密码:</span></label>
+                        <div class="right-side">
+                            <input type="password" id="password"  name="password" placeholder="请输入6-16位密码">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="confirmPassword"><i class="icon icon-lock"></i><span>确认密码:</span></label>
+                        <div class="right-side">
+                            <input type="password" id="confirmPassword" name="repassword" placeholder="请在此输入密码">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="realName"><i class="icon icon-person"></i><span>真实姓名:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="realName" name="realName" placeholder="真实姓名必须与提款账户姓名一致，否则不能提款">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="email"><i class="icon icon-email"></i><span>邮箱:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="email" name="email" placeholder="请输入正确的电子邮箱地址">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="phoneNum"><i class="icon icon-phone"></i><span>手机号码:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="phoneNum" name="phoneNumber" placeholder="手机号码是更改资料和找回密码的唯一途径">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="validCode"><i class="icon icon-shield"></i><span>验证码:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="validCode" name="captcha" placeholder="请填写4位验证码">
+                            <img src="" alt="" data-element="validImg" class="validImg" data-events="click:checkValidCode;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" class="submit" value="立即申请">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+.UI-progress {
+  padding: 12px 0 0px;
+  position: relative;
+  font-size: 14px;
+}
+.UI-progress .line-container {
+  width: 100%;
+  position: relative;
+  height: 16px;
+}
+.UI-progress .circle-group {
+  width: 100%;
+  position: absolute;
+}
+.UI-progress .circle-group span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #bfbfbf;
+  position: absolute;
+  transform: translateX(-50%);
+}
+.UI-progress .circle-group span:first-child {
+  transform: translateX(0);
+}
+.UI-progress .circle-group span:last-child {
+  transform: translateX(-100%);
+}
+.UI-progress .line {
+  width: 100%;
+  background: #bfbfbf;
+  height: 10px;
+  border-radius: 6px;
+  position: relative;
+  top: 3px;
+}
+.UI-progress .line-background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.UI-progress .line-current {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: width ease-in-out 1s;
+  will-change: with;
+}
+.UI-progress .line-current .box {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  height: 16px;
+  top: 0;
+}
+.UI-progress .line-current .line {
+  background: #2a9cf9;
+  height: 6px;
+  margin-top: 2px;
+}
+.UI-progress .line-current .circle-group span {
+  background: #2a9cf9;
+  border: 2px solid #bfbfbf;
+}
+.UI-progress .hide-beyond-line {
+  width: 100%;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+.UI-progress .hide-beyond-line:before,
+.UI-progress .hide-beyond-line:after {
+  content: "";
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+.UI-progress .hide-beyond-line:before {
+  border-left-color: #bfbfbf;
+  float: left;
+}
+.UI-progress .hide-beyond-line:after {
+  border-right-color: #bfbfbf;
+  float: right;
+}
+.UI-progress .count-numer {
+  position: absolute;
+  white-space: nowrap;
+  top: -12px;
+  right: -8px;
+  color: #424242;
+  line-height: 100%;
+}
+.UI-progress .count-numer span {
+  font-size: 0.72916667rem;
+}
+.UI-progress .count-numer:after {
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  border: 0 solid transparent;
+  border-width: 8px 5px 0;
+  border-top-color: #2a9cf9;
+}
+.UI-progress .progress-targes {
+  width: 100%;
+  color: #424242;
+  line-height: 100%;
+  margin-top: 0.10416667rem;
+  height: 14px;
+}
+.UI-progress .progress-targes span {
+  position: absolute;
+  font-size: 0.72916667rem;
+  transform: translateX(-50%);
+}
+.UI-progress .progress-targes span:first-child {
+  transform: translateX(0);
+}
+.UI-progress .progress-targes span:last-child {
+  transform: translateX(-100%);
+}

@@ -1,0 +1,15 @@
+.page-createdrecords .swiper-slide,
+.page-createdrecords .results-tab {
+  width: 910px;
+}
+.page-createdrecords table.row {
+  table-layout: fixed;
+}
+.page-createdrecords table.row td {
+  padding-left: 0.52083333rem;
+  padding-bottom: 0.3125rem;
+}
+.page-createdrecords table.row input,
+.page-createdrecords table.row select {
+  width: 100%;
+}

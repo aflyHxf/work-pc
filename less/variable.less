@@ -1,0 +1,128 @@
+@baseWidth: 1920px;
+@baseSize: @baseWidth/100;
+@baseColor: #133773;
+@yellowColor: #fff90e;
+@greenColor: #00ff5e;
+@greyColor: #dcdcdc;
+@blackColor: #434343;
+@skyBlueColor: #0c6cb9;
+@pureBlueColor: #1e8feb;
+@blueColor: #074d88;
+@activeColor: #2a9cf9;
+@lightBlueColor: #c9e5fb;
+@linear: linear-gradient(to bottom, #ffffff, #efefef);
+
+@layerUI: 99;
+@layerPOPUP: 100;
+@layerAnimation: 101;
+
+@header_size: 80px;
+@main_wrapper_width: 1000px;
+
+.rem(@selector, @amt, @baseSize: @baseSize) {
+    @{selector}: unit((@amt / @baseSize), rem);
+}
+
+.rem2(@selector, @px1, @px2, @baseSize: @baseSize) {
+    @{selector}: unit((@px1 / @baseSize), rem) unit((@px2 / @baseSize), rem);
+}
+
+.rem3(@selector, @px1, @px2, @px3, @baseSize: @baseSize) {
+    @{selector}: unit((@px1 / @baseSize), rem) unit((@px2 / @baseSize), rem) unit((@px3 / @baseSize), rem);
+}
+
+.rem4(@selector, @px1, @px2, @px3, @px4, @baseSize: @baseSize) {
+    @{selector}: unit((@px1 / @baseSize), rem) unit((@px2 / @baseSize), rem) unit((@px3 / @baseSize), rem) unit((@px4 / @baseSize), rem);
+}
+
+.width(@x) {
+  width: unit(@x/@baseSize, rem);
+}
+
+.max-width(@x) {
+  max-width: unit(@x/@baseSize, rem);
+}
+
+.min-height(@x) {
+  min-height: unit(@x/@baseSize, rem);
+}
+
+.max-height(@x) {
+  max-height: unit(@x/@baseSize, rem);
+}
+
+.height(@x) {
+  height: unit(@x/@baseSize, rem);
+}
+
+.line-height(@x) {
+  line-height: unit(@x/@baseSize, rem);
+}
+
+.font-size(@x) {
+  font-size: unit(@x/@baseSize, rem);
+}
+
+.top(@x) {
+  top: unit(@x/@baseSize, rem);
+}
+
+.mt(@x) {
+  margin-top: unit(@x/@baseSize, rem);
+}
+
+.pt(@x) {
+  padding-top: unit(@x/@baseSize, rem);
+}
+
+.bottom(@x) {
+  bottom: unit(@x/@baseSize, rem);
+}
+
+.mb(@x) {
+  margin-bottom: unit(@x/@baseSize, rem);
+}
+
+.pb(@x) {
+  padding-bottom: unit(@x/@baseSize, rem);
+}
+
+.left(@x) {
+  left: unit(@x/@baseSize, rem);
+}
+
+.ml(@x) {
+  margin-left: unit(@x/@baseSize, rem);
+}
+
+.pl(@x) {
+  padding-left: unit(@x/@baseSize, rem);
+}
+
+.right(@x) {
+  right: unit(@x/@baseSize, rem);
+}
+
+.mr(@x) {
+  margin-right: unit(@x/@baseSize, rem);
+}
+
+.pr(@x) {
+  padding-right: unit(@x/@baseSize, rem);
+}
+
+.text-indent(@x) {
+  text-indent: unit(@x/@baseSize, rem);
+}
+
+.border-radius(@x) {
+  border-radius: unit(@x/@baseSize, rem);
+}
+
+.translateX(@x) {
+  transform: translateX(unit(@x/@baseSize, rem));
+}
+
+.translateY(@x) {
+  transform: translateY(unit(@x/@baseSize, rem));
+}

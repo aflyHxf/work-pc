@@ -1,0 +1,20 @@
+<% var tool = $tool(); %>
+<% if (players && players.length > 0){ %>
+<% for (var i = 0,len = players.length;i < len;i++){%>
+<tr>
+    <td><%=players[i].name%></td>
+    <td><%=players[i].realName%></td>
+    <td><%=players[i].topUpTimes%></td>
+    <td><%=tool.transferDateToString(players[i].registrationTime)%></td>
+    <td><%=tool.transferDateToString(players[i].lastAccessTime)%></td>
+    <td><%=players[i].lastLoginIp%></td>
+    <td><%=players[i].domain%></td>
+</tr>
+<% } %>
+<% }else{ %>
+<tr>
+    <td colspan="7">
+        暂无信息
+    </td>
+</tr>
+<% } %>

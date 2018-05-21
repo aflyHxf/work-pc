@@ -1,0 +1,51 @@
+<div class="UI-progress">
+    <div class="line-container">
+        <!-- 背景图层 -->
+        <div class="line-background">
+            <%  if (anchors.length > 2 && isRoundAnchor) { %>
+            <div class="circle-group">
+                <% for (var i = 0; i < anchors.length; i++) {
+                    var percent = 100 / (anchors.length - 1) * i;
+                %>
+                <span style="left: <%==percent%>%;"></span>
+                <% } %>
+            </div>
+            <% } %>
+            <div class="line"></div>
+        </div>
+        <!-- 动画遮罩层 -->
+        <div class="line-current progressNode">
+            <div class="box">
+                <% if (anchors.length > 2 && isRoundAnchor) { %>
+                <div class="circle-group">
+                    <% for (var i = 0; i < anchors.length; i++) {
+                        var percent = 100 / (anchors.length - 1) * i;
+                    %>
+                    <span style="left: <%==percent%>%;"></span>
+                    <% } %>
+                </div>
+                <% } %>
+                <div class="line"></div>
+            </div>
+            <!-- 当前进度值 -->
+            <div class="count-numer">
+                <span><%=currentVal%></span>
+            </div>
+        </div>
+        <% if (anchors.length > 2) { %>
+        <!-- 遮罩图层 -->
+        <div class="hide-beyond-line"></div>
+        <% } %>
+    </div>
+    <!-- 数值图层 -->
+    <div class="progress-targes">
+        <% for (var i = 0; i < anchors.length; i++) {
+            var percent = 100 / (anchors.length - 1) * i;
+        %>
+        <span style="left: <%==percent%>%;"><%==anchors[i]%></span>
+        <% if (anchors.length <= 2 && i == 0) { %>
+        <!--<span style="left: 50%"><%-xjs.tool.calcPercent(currentVal, anchors[anchors.length - 1], 2)%></span>-->
+        <% } %>
+        <% } %>
+    </div>
+</div>

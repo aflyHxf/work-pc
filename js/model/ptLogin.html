@@ -1,0 +1,42 @@
+<div class="ptLogin">
+    <div class="table-cell">
+        <div class="area">
+            <div class="content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <form data-element="formNode">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="text">
+                                    <label for="name">账号名称</label><input type="text" class="UI-Input" id="name" name="name" v-input="name">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="text">
+                                    <label for="password">账号密码</label><input type="password" class="UI-Input" id="password" name="password" v-input="password">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="display: none;" data-element="captchaNode">
+                            <td>
+                                <div class="text">
+                                    <label for="captcha">验证码</label><input type="text" maxlength="" class="UI-Input" id="captcha" name="captcha" v-input="captcha" placeholder="请填写4位验证码">
+                                    <img src="" alt="" data-element="validImg" class="validImg" data-events="click:checkValidCode;">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" class="submit" value="">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

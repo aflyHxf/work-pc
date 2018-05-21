@@ -1,0 +1,45 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.popup-headportrait {
+  .rem(width, 636px);
+  .body {
+    .rem2(padding, 33px, 0);
+    .photos-group {
+      font-size: 0;
+      text-align: center;
+      .row:first-child {
+        .rem(margin-bottom, 14px);
+      }
+    }
+    .photo-box {
+      .rem(width, 88px);
+      .rem(height, 88px);
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: middle;
+      .rem2(margin, 0, 7px);
+      position: relative;
+      &.active:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 4px solid #ffb400;
+        .rem(border-width, 4px);
+        box-sizing: border-box;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .submit {
+    display: block;
+    margin: 0 auto;
+    .rem(margin-top, 35px);
+  }
+}

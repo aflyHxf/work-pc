@@ -1,0 +1,62 @@
+<div class="popup-view" data-element="popupViewNode">
+    <div class="popup-container">
+        <div class="popup-wrap popup-default popup-contact">
+            <div class="popup-title"><h2>在线客服</h2><i class="icon icon-popup-close-2" data-events="click: close;"></i></div>
+            <div class="popup-body">
+                <div class="row">
+                    <a class="contact-block" href="<%=data.getPlatformDetails.csUrl%>" target="_blank">
+                        <i class="icon icon-online-chat"></i>
+                        <div class="col-right">
+                            <p class="lh45">在线客服</p>
+                        </div>
+                    </a>
+                    <div class="contact-block" data-element="contactByQQNode">
+                        <i class="icon icon-qq" qq="<%=data.firstQQ%>"></i>
+                        <div class="col-right" >
+                            <p><span qq="<%=data.firstQQ%>">QQ客服</span></p>
+                            <% for (var i = 0; i < data.csQQData.length; i++) { %>
+                                <span qq="<%=data.csQQData[i]%>"><%=data.csQQData[i]%></span>
+                            <% } %>
+                        </div>
+                    </div>
+                    <a class="contact-block" target="_blank">
+                        <!-- <i class="icon icon-wechat"></i> -->
+                        <div class="col-right">
+                            <center>
+                              <p>微信客服</p>
+                              <img src="images/bannerQr7.jpg" width="100" height="100">
+                              <span><%=data.getPlatformDetails.csWeixin%></span>
+                            </center>
+                        </div>
+                    </a>
+                    <!-- <div class="contact-block"> -->
+                        <!-- <a href="skype:<%=data.getPlatformDetails.csPhone%>?call">
+                            <i class="icon icon-call"></i>
+                            <div class="col-right">
+                                <p>电话客服</p>
+                                <span><%=data.getPlatformDetails.csPhone%></span>
+                            </div>
+                        </a> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="row">
+                    <div class="contact-block">
+                        <i class="icon icon-recall"></i>
+                        <div class="col-right">
+                            <p>免费热线回拨</p>
+                        </div>
+                    </div>
+                </div>
+                <form data-element="formNode">
+                    <% var userInfo = $mcm().cache.getUserInfoFromCache(); %>
+                    <div class="UI-input-box"><input type="number" placeholder="手机号" name="phone" value="<%=userInfo?userInfo.phoneNumber:''%>"></div>
+                    <div class="UI-input-box"><input type="text" placeholder="验证码" name="captcha"><img src="<%=getCode();%>" data-events="click: changeCode;" class="code"></div>
+                    <input type="submit" class="btn btn-submit" value="确定">
+                </form>
+                <p class="tips">温馨提示 : 回拨为注册电话，点击号码回拨即可， 如果回拨不是注册电话，请输入最新电话，点击回拨.</p>
+            </div>
+        </div>
+    </div>
+</div>

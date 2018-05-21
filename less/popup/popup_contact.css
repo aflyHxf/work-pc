@@ -1,0 +1,98 @@
+.popup-contact {
+  border-radius: 0;
+  width: 39.58333333rem;
+  padding: 0rem 1.04166667rem;
+}
+.popup-contact .lh45 {
+  line-height: 2.34375rem;
+}
+.popup-contact .popup-title {
+  height: 5.20833333rem;
+  line-height: 5.3125rem;
+  text-align: center;
+  color: #1e8fea;
+  font-size: 1.5625rem;
+  font-weight: bold;
+}
+.popup-contact .popup-title .icon {
+  position: absolute;
+  top: 1.04166667rem;
+  right: 1.04166667rem;
+  cursor: pointer;
+}
+.popup-contact .popup-body {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  font-size: 0;
+  padding-top: 1.82291667rem;
+  padding-bottom: 5.20833333rem;
+}
+.popup-contact .contact-block {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  color: #1e8fea;
+  text-align: left;
+  padding: 0rem 1.30208333rem;
+  cursor: pointer;
+}
+.popup-contact .contact-block p {
+  font-size: 0.9375rem;
+  font-weight: bold;
+}
+.popup-contact .contact-block span {
+  font-size: 0.72916667rem;
+  display: block;
+  max-width: 4.16666667rem;
+  white-space: nowrap;
+}
+.popup-contact .contact-block a {
+  color: #1e8fea;
+}
+.popup-contact .popup-footer {
+  text-align: left;
+}
+.popup-contact .popup-footer .contact-block {
+  display: block;
+  line-height: 4.0625rem;
+  width: 10.9375rem;
+}
+.popup-contact .popup-footer form {
+  display: block;
+  padding-left: 1.30208333rem;
+}
+.popup-contact .popup-footer .UI-input-box {
+  margin: 0;
+  width: 10.41666667rem;
+  height: 1.5625rem;
+  font-size: 0.9375rem;
+  margin-right: 0.67708333rem;
+  font-weight: bold;
+  display: inline-block;
+}
+.popup-contact .popup-footer .UI-input-box input {
+  height: 100%;
+  padding: 0rem 0.78125rem;
+  font-size: 0.9375rem;
+  color: #434343;
+}
+.popup-contact .popup-footer .code {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 4.16666667rem;
+}
+.popup-contact .popup-footer .btn-submit {
+  width: 4.6875rem;
+  height: 1.5625rem;
+  font-size: 0.72916667rem;
+  color: #fff;
+  background-color: #1e8fea;
+  vertical-align: top;
+}
+.popup-contact .popup-footer .tips {
+  margin: 1.04166667rem 0rem;
+  padding: 0rem 1.30208333rem;
+  font-size: 0.72916667rem;
+}

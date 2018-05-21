@@ -1,0 +1,60 @@
+<% var tool = $tool() %>
+<div class="page-records page-commision">
+    <h1>实时佣金详情</h1>
+    <form action="" class="condition-form">
+        <table class="row">
+            <tr>
+                <td>
+                    <label for="beginTime">开始时间：</label>
+                    <div class="UI-input-box"><input type="text" class="UI-Input" id="beginTime" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(1, 1)%>" data-element="startNode"></div>
+                </td>
+                <td>
+                    <label for="endTime">结束时间：</label>
+                    <div class="UI-input-box"><input type="text" class="UI-Input" id="endTime" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(0, 2)%>" data-element="endNode"></div>
+                </td>
+                <td>
+                    <label for="pageCount">每页：</label>
+                    <div class="UI-input-box">
+                        <select id="pageCount" v-input="every">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="row">
+            <div class="col-right"><div class="UIButton" data-events="click:submit;"><div>查询</div></div></div>
+        </div>
+    </form>
+    <!--<p class="tips"><span>佣金＝（下级会员负盈利-推广成本）*％</span>总输赢:155,875.91 总佣金</p>-->
+    <div class="search-results-view">
+        <div class="swiper-container" data-element="swiperNode">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <table class="results-tab">
+                        <tr>
+                            <th>账号 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>总存款 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>总取款 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>总流水 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>优惠 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>财务费 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>平台费 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>净利润 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                        </tr>
+                        <tbody class="commissionReport">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-scrollbar" data-element="scrollbarNode"></div>
+        <div class="page-controller">
+        </div>
+    </div>
+</div>

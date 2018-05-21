@@ -1,0 +1,118 @@
+<% var win = $getCommonVal() %>
+<% var tool = $tool()%>
+<% var provide = $business().provider %>
+<% var info = $business() %>
+<div class="page-overview">
+    <div class="section-title row">
+        <span class="col-left">中心钱包</span>
+        <div class="amount-setting col-left">
+            <span class="amount" v-param="totalCredit">0.00</span>
+            <a class="btn btn-prime" href="#alipay_manual">充值</a>
+            <a class="btn btn-prime" href="#withdrawals">提现</a>
+            <a class="tips-node" href="<%=data.getPlatformDetails.csUrl%>" target="_blank">
+                <i class="icon icon-question"></i>
+                <span>余额有问题？请联系客服查询。</span>
+            </a>
+        </div>
+    </div>
+    <table class="section-table section-wrapper">
+        <tr>
+            <th>游戏大厅</th>
+            <% data.providerList.forEach(function(provider){ %>
+            <th><span class="blue"><%= provider['nickName'] || provider['name'] %></span></th>
+            <% }) %>
+        </tr>
+        <tr>
+            <td>游戏额度</td>
+            <% data.providerList.forEach(function(provider){ %>
+            <td><span class="blue bold" v-param="<%=provider['name']%>">获取中</span></td>
+            <% }) %>
+        </tr>
+    </table>
+    <% if(data.reward){ %>
+    <div class="section-promotion-information section-wrapper">
+        <div class="section-head row">
+            <span class="bold">参与活动：</span>
+            <div class="active-promotion">
+                <a><%=data.reward.eventId.name%></a>
+                <% var info = $business() %>
+                <% for(var i = 0,len = data.reward.targetProviders.length;i < len;i++){ %>
+                    <% var id = data.reward.targetProviders[i].providerId %>
+                    <% if(info.provider[id]){ %>
+                    <div class="label"><span class="bold"><%=info.provider[id]%></span></div>
+                    <% } %>
+                <% }%>
+            </div>
+            <div class="col-right">
+                <a class="btn btn-normal">活动记录</a>
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="row row-center mb30">
+                <span class="label-progress">有效投注:</span>
+                <div data-element="progressNode" class="progress-wrapper"></div>
+            </div>
+            <div class="row">
+                <i class="icon icon-lock-black"></i>
+                <span class="bold middle mr30">优惠额度：<%=data.reward.currentAmount%></span>
+                <span class="bold middle blue">账户总额：<span v-param="totalOverage"></span></span>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+    <div class="section-title"><span>提款申请</span></div>
+    <table class="section-table section-wrapper">
+        <tr>
+            <th>申请单号</th>
+            <th>生成日期</th>
+            <th>申请金额</th>
+            <th>当前状态</th>
+            <th>操作</th>
+        </tr>
+        <% var withdraw = data.withdraw.records; %>
+        <% if(withdraw.length > 0){ %>
+            <% for(var i = 0,len = win.Math.min(withdraw.length,5);i < len;i++){ %>
+            <% var obj = withdraw[i]%>
+            <tr>
+                <td><%=obj.proposalId%></td>
+                <td><%=tool.transferDateToString(new win.Date(obj.createTime))%></td>
+                <td><span class="blue bold"><%=tool.formatCurrency(obj.data.amount)%></span></td>
+                <td><span class="blue bold"><%=info.orderStatus[obj.status]%></span></td>
+                <td><% if(obj.status == 'Pending'){ %><div class="UIButton" data-events="click:cancelWithdraw" data-id="<%=obj.proposalId%>"><div>取消</div></div><% } %></td>
+            </tr>
+            <% } %>
+        <% }else{ %>
+            <tr>
+                <td colspan="5">
+                    暂无记录
+                </td>
+            </tr>
+        <% } %>
+    </table>
+    <div class="section-title"><span>存款提交</span></div>
+    <table class="section-table section-wrapper">
+        <tr>
+            <th>申请单号</th>
+            <th>申请时间</th>
+            <th>有效时间</th>
+            <th>申请金额</th>
+            <th>当前状态</th>
+            <th>操作</th>
+        </tr>
+        <% if(data.saving){ %>
+        <tr>
+            <td><%=data.saving.proposalId%></td>
+            <td><%=tool.transferDateToString(new win.Date(data.saving.createTime))%></td>
+            <td><%=tool.transferDateToString(new win.Date(data.saving.data.validTime))%></td>
+            <td><span class="blue bold"><%=tool.formatCurrency(data.saving.data.amount)%></span></td>
+            <td><span class="blue bold"><%=info.orderStatus[data.saving.status]%></span></td>
+            <td><% if(data.saving.status == 'Pending'){%><div class="UIButton" data-events="click:cancelSaving" data-id="<%=data.saving.proposalId%>"><div>取消</div></div><% } %></td>
+        </tr>
+        <% }else{ %>
+        <tr>
+            <td colspan="6">暂无记录</td>
+        </tr>
+        <% }%>
+    </table>
+</div>

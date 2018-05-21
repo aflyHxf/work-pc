@@ -1,0 +1,13 @@
+.popup-loginbyphone .UIButton {
+  width: auto;
+  position: absolute;
+  right: 0.52083333rem;
+  top: 0.52083333rem;
+}
+.popup-loginbyphone .UIButton.disabled {
+  background-color: #666666;
+}
+.popup-loginbyphone .UIButton > div {
+  padding-left: 0.20833333rem;
+  padding-right: 0.20833333rem;
+}

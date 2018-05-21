@@ -1,0 +1,33 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.popup-register {
+  .body {
+    .rem(padding-top, 19px);
+    .rem(padding-bottom, 29px);
+
+    .validImg{
+      position: absolute;
+      .right(10px);
+      .top(10px);
+    }
+    .UIButton{
+      &.disabled{
+        background-color: #666666;
+      }
+
+      >div{
+        .pl(4px);
+        .pr(4px);
+      }
+      width: auto;
+      position: absolute;
+      .right(10px);
+      .top(10px);
+    }
+  }
+  .submit {
+    display: block;
+    margin: 0 auto;
+  }
+}

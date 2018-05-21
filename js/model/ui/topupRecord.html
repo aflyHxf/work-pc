@@ -1,0 +1,14 @@
+<%  var tool = $tool();
+    var record, i;
+    for (i = 0; i < data.recordList.records.length; i++) {
+        record = data.recordList.records[i];
+%>
+<div class="record">
+    <input type="<%if (!data.reference.multipleChoice){%>radio<%}else{%>checkbox<%}%>" name="choice" value="<%=record._id%>" id="<%=record._id%>">
+    <label for="<%=record._id%>">
+        <p>存款时间：<%=tool.formatDate(record.createTime, "y-m-d h:i:s")%></p>
+        <p>存款方式：在线充值</p>
+        <p>存款金额：<%=record.amount%></p>
+    </label>
+</div>
+<% } %>

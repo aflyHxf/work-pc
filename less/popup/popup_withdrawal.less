@@ -1,0 +1,47 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.popup-withdrawal {
+  .body {
+    .rem(padding-top, 20px);
+    .rem(padding-bottom, 40px);
+    p {
+      .rem(font-size, 14px);
+      .rem(line-height, 30px);
+      .rem(margin-bottom, 30px);
+      text-align: left;
+    }
+  }
+  .submit {
+    margin: 0 auto;
+  }
+  label {
+    .rem(width, 100px);
+    span {
+      margin: 0;
+    }
+  }
+  .bank-info {
+    text-align: left;
+    span, a {
+      .rem(font-size, 16px);
+      vertical-align: middle;
+      color: #434343;
+      text-decoration: none;
+    }
+    .bn {
+      .rem(font-size, 18px);
+      color: #1e8fea;
+      .rem(margin-right, 10px);
+      font-weight: bold;
+    }
+  }
+  .arrow {
+    display: inline-block;
+    vertical-align: middle;
+    border: 5px solid transparent;
+    .rem(border-width, 8px);
+    border-left-color: #434343;
+    margin-left: 4px;
+  }
+}

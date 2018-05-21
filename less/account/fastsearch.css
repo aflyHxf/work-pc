@@ -1,0 +1,149 @@
+.page-fastsearch {
+  color: #434343;
+}
+.page-fastsearch .blue {
+  color: #1e8fea;
+}
+.page-fastsearch .mb10 {
+  margin-bottom: 0.52083333rem;
+}
+.page-fastsearch .text-center {
+  text-align: center;
+}
+.page-fastsearch .promotion-node {
+  height: 5.72916667rem;
+  background: #eee;
+}
+.page-fastsearch .promotion-link-node {
+  float: left;
+  width: 26.77083333rem;
+  text-align: center;
+  padding-top: 0.9375rem;
+}
+.page-fastsearch .promotion-link-node label {
+  font-size: 0.72916667rem;
+  line-height: 1.66666667rem;
+  width: 3.75rem;
+  vertical-align: middle;
+}
+.page-fastsearch .promotion-link-node .UI-input-box {
+  display: inline-block;
+  float: inherit;
+  vertical-align: middle;
+  width: 20.83333333rem;
+  height: 1.66666667rem;
+}
+.page-fastsearch .promotion-link-node p {
+  color: #1e8fea;
+  margin-top: 1.25rem;
+  line-height: 100%;
+  font-size: 12px;
+}
+.page-fastsearch .promotion-time {
+  overflow: hidden;
+  background: #2a9cf9;
+  color: #fff;
+  text-align: center;
+  height: 100%;
+}
+.page-fastsearch .promotion-time h4 {
+  font-size: 1.25rem;
+  line-height: 2.08333333rem;
+  font-weight: bold;
+}
+.page-fastsearch .promotion-time p {
+  font-size: 12px;
+  line-height: 100%;
+}
+.page-fastsearch .promotion-time .row:first-child {
+  height: 3.22916667rem;
+  border-bottom: 1px solid #fff;
+}
+.page-fastsearch .promotion-time .row:last-child {
+  line-height: 2.5rem;
+  font-size: 14px;
+  font-weight: bold;
+}
+.page-fastsearch .promotion-time .icon-person {
+  font-size: 0.72916667rem;
+}
+.page-fastsearch .report-node table {
+  width: 100%;
+  table-layout: fixed;
+}
+.page-fastsearch .report-node td {
+  height: 6.25rem;
+  background-color: #eee;
+  border-right: 10px solid #fff;
+  border-right-width: 0.52083333rem;
+  text-align: center;
+  cursor: pointer;
+}
+.page-fastsearch .report-node td:last-child {
+  border: none;
+}
+.page-fastsearch .report-node h4 {
+  font-size: 0.83333333rem;
+  font-weight: bold;
+}
+.page-fastsearch .report-node p {
+  font-size: 0.625rem;
+  line-height: 1.30208333rem;
+}
+.page-fastsearch .report-node .strong {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 100%;
+}
+.page-fastsearch .report-node .swiper-slide {
+  padding-top: 0.88541667rem;
+}
+.page-fastsearch .report-node .swiper-container {
+  height: 100%;
+}
+.page-fastsearch .report-node .swiper-navbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 1.5625rem;
+}
+.page-fastsearch .graph-tab {
+  width: 100%;
+  table-layout: fixed;
+}
+.page-fastsearch .graph-tab td {
+  border: 0 solid #fff;
+  border-right-width: 0.52083333rem;
+  border-bottom-width: 0.52083333rem;
+}
+.page-fastsearch .graph-tab td:last-child {
+  border-right: none;
+}
+.page-fastsearch .graph-tab .graph-wrapper {
+  background-color: #eee;
+  height: 13.54166667rem;
+}
+.page-fastsearch .graph-tab .graph-title {
+  border-bottom: 1px solid #dcdcdc;
+  height: 3.125rem;
+  padding: 0.52083333rem 1.04166667rem;
+  line-height: 1.04166667rem;
+  font-size: 12px;
+}
+.page-fastsearch .graph-tab h5 {
+  font-size: 0.72916667rem;
+  font-weight: bold;
+}
+.page-fastsearch .graph-tab h2 {
+  line-height: 2.08333333rem;
+  font-size: 1.04166667rem;
+  font-weight: bold;
+}
+.page-fastsearch .graph-tab .graph-view {
+  height: 10.41666667rem;
+  line-height: 10.41666667rem;
+  text-align: center;
+}
+.page-fastsearch .graph-tab .graph-view p {
+  font-size: 2.08333333rem;
+}

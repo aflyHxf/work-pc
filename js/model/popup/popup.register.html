@@ -1,0 +1,92 @@
+<div class="popup-view" data-element="popupViewNode">
+    <div class="popup-container">
+        <div class="popup-wrap popup-default popup-register">
+            <div class="head"><p>注册账号</p><div class="right-side"><i class="icon icon-popup-close" data-events="click: close;"></i></div></div>
+            <div class="body">
+                <form data-element="formNode">
+                    <div class="UI-input-box">
+                        <label for="account"><i class="icon icon-controller"></i>
+                          <span style="
+                              width: auto;
+                              color: red;
+                          ">*</span>
+                          <span style="margin-left: 0;">申请账号</span><b>:</b></label>
+                        <div class="right-side">
+                            <input type="text" id="account" name="name" placeholder="请使用6-20位小写英文字母与数字组合" v-input="account">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="password"><i class="icon icon-lock"></i>
+                          <span style="
+                              width: auto;
+                              color: red;
+                          ">*</span>
+                          <span style="margin-left: 0;">申请密码</span><b>:</b></label>
+                        <div class="right-side">
+                            <input type="password" id="password" name="password" placeholder="请输入6-20位密码" v-input="password">
+                        </div>
+                    </div>
+                    <div class="UI-input-box">
+                        <label for="confirmPassword"><i class="icon icon-lock"></i>
+                          <span style="
+                              width: auto;
+                              color: red;
+                          ">*</span>
+                          <span style="margin-left: 0;">确认密码</span><b>:</b></label>
+                        <div class="right-side">
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="请重覆输入6-20位密码" v-input="confirmPassword">
+                        </div>
+                    </div>
+                    <!-- <div class="UI-input-box">
+                        <label for="realName"><i class="icon icon-person"></i>
+                          <span style="
+                              width: auto;
+                              color: red;
+                          ">*</span>
+                          <span style="margin-left: 0;">会员姓名</span><b>:</b></label>
+                        <div class="right-side">
+                            <input type="text" id="realName" name="realName" placeholder="会员姓名必须与提款帐户姓名一致" v-input="realName">
+                        </div>
+                    </div> -->
+                    <div class="UI-input-box">
+                        <label for="email"><i class="icon icon-email"></i><span>邮箱</span><b>:</b></label>
+                        <div class="right-side">
+                            <input type="text" id="email" name="email" placeholder="请输入正确的电子邮箱地址" v-input="email">
+                        </div>
+                    </div>
+                    <!-- <div class="UI-input-box">
+                        <label for="phoneNum"><i class="icon icon-phone"></i><span>手机号码</span><b>:</b></label>
+                        <div class="right-side">
+                            <input type="text" id="phoneNum" name="phoneNumber" placeholder="手机号码是更改资料和找回密码的唯一途径" v-input="phoneNumber">
+                        </div>
+                    </div> -->
+                    <!-- <div class="UI-input-box">
+                        <label for="smsCode"><i class="icon icon-shield"></i><span>验证码</span><b>:</b></label>
+                        <div class="right-side">
+                            <input type="text" id="smsCode" name="smsCode" placeholder="请填写4位验证码" v-input="validCode">
+                            <div class="UIButton" data-events="click:phoneCode">
+                                <div>获取手机验证码</div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!--<div class="UI-input-box">-->
+                        <!--<label for="validCode"><i class="icon icon-shield"></i><span>验证码:</span></label>-->
+                        <!--<div class="right-side">-->
+                            <!--<input type="text" id="validCode" placeholder="请填写4位验证码" v-input="validCode">-->
+                            <!--<img src="" alt="" data-element="validImg" class="validImg" data-events="click:checkValidCode;">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="UI-input-box">
+                        <label for="recommend"><i class="icon icon-recommend"></i><span>推荐人:</span></label>
+                        <div class="right-side">
+                            <input type="text" id="recommend" placeholder="没有则无需填写" v-input="recommend">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" class="submit" value="立即申请">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

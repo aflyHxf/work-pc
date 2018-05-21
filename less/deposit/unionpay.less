@@ -1,0 +1,59 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.page-unionpay {
+  .img-computer {
+    background: url(../images/computer.png) no-repeat center;
+    -webkit-background-size:contain;
+    background-size:contain;
+    .rem(width, 243px);
+    .rem(height, 76px);
+    .rem(margin-top, 89px);
+    .rem(margin-bottom, 32px);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .input-row {
+    height: 30px;
+    .rem(margin-bottom, 32px);
+    .inputArea{
+      position: relative;
+      width: 200px;
+      margin: 0 auto;
+    }
+    label {
+      position: absolute;
+      height: 30px;
+      line-height: 30px;
+      left:-70px;
+      width: 70px;
+    }
+    .UI-Input{
+      width: 200px;
+      display: block;
+      margin: 0 auto;
+      height: 30px;
+      border-radius: 5px;
+    }
+  }
+  .submit-form {
+    .row{
+      .btn-submit {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 30px;
+      }
+    }
+  }
+  .results-view {
+    .rem(margin-bottom, 40px);
+    ul {
+      .rem(margin-top, 40px);
+    }
+    li {
+      .rem(padding-left, 194px);
+    }
+  }
+}

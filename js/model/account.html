@@ -1,0 +1,42 @@
+<% var user = $mcm().cache.getUserInfoFromCache(); %>
+<div class="page-account">
+    <div class="banner-node"></div>
+    <div class="page-inner-wrapper">
+        <div class="sidebar-wrapper">
+            <div class="top-node">
+                <div class="head-portrait" data-events="click: openPortraitPopup;">
+                    <% if (user.photoUrl) { %>
+                    <img src="images/portrait/<%=user.photoUrl%>" data-element="portraitNode">
+                    <% } else { %>
+                    <img src="images/portrait/1.jpg" data-element="portraitNode">
+                    <% } %>
+                </div>
+                <p align="center" style="margin-bottom:5px;color:#58D3F7;"><b><%= user.playerLevel.name || '' %></b></p>
+
+                <p v-param="name">加载中</p>
+                <a href="#personal" class="btn btn-prime">基本资料</a>
+            </div>
+            <div class="nav-node" data-element="navNode">
+                <%
+                    var tool = $tool();
+                    var url = tool.getSearch();
+                    var pid = url.pid;
+                %>
+                <a href="#overview?pid=1" class="link nav <%if(pid==1){%>active<%}%>">账户中心</a>
+                <!--<a href="#" class="link nav <%if(pid==1){%>active<%}%>">申请优惠</a>-->
+                <a href="#transfer?pid=2" class="link nav <%if(pid==2){%>active<%}%>">游戏转账</a>
+                <a href="#report?pid=3" class="link nav <%if(pid==3){%>active<%}%>">记录查询</a>
+                <a href="#mailbox?pid=4" class="link nav <%if(pid==4){%>active<%}%>" id="mail">站内信</a>
+                <!-- <div class="link drop-down">
+                    <p class="<%if(pid>3){%>show<%}%>" data-events="click:organMenu;">赚钱分成</p>
+                    <div class="slide-node">
+                        <a class="link nav <%if(pid==4){%>active<%}%>" href="#fastsearch?pid=4">快速查询</a>
+                        <a class="link nav <%if(pid==5){%>active<%}%>" href="#created_records?pid=5">开户分析</a>
+                        <a class="link nav <%if(pid==6){%>active<%}%>" href="#commission?pid=6">实时报表</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="content-wrapper" id="contentNode"></div>
+    </div>
+</div>

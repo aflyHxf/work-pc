@@ -1,0 +1,89 @@
+.page-records {
+  color: #434343;
+}
+.page-records h1 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  border-left: 6px solid #434343;
+  border-left-width: 0.3125rem;
+  line-height: 100%;
+  padding-left: 0.625rem;
+}
+.page-records .condition-form label {
+  width: 72px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+  text-align: justify ;
+  text-align-last: justify;
+}
+.page-records .condition-form input:not([type="submit"]),
+.page-records .condition-form select {
+  height: 32px;
+  background: #fff;
+  border: 1px solid #b7b7b7;
+  border-radius: 2px;
+}
+.page-records .condition-form .UI-input-box {
+  background: none;
+}
+.page-records .condition-form .col-4:nth-child(2) {
+  padding-left: 0.52083333rem;
+}
+.page-records .condition-form .row {
+  margin-bottom: 0.9375rem;
+}
+.page-records .condition-form .btn-submit {
+  width: 4.6875rem;
+  height: 1.66666667rem;
+  color: #fff;
+  background-color: #2a9cf9;
+  border-radius: 4px;
+}
+.page-records .results-tab {
+  table-layout: fixed;
+  border: 1px solid #dcdcdc;
+}
+.page-records .results-tab td,
+.page-records .results-tab th {
+  width: 6.77083333rem;
+  line-height: 2.60416667rem;
+  border-bottom: 1px solid #dcdcdc;
+  text-align: center;
+}
+.page-records .results-tab th {
+  font-size: 14px;
+  background: #c9e5fb;
+}
+.page-records .results-tab .ctrl {
+  display: inline-block;
+  vertical-align: sub;
+  cursor: pointer;
+}
+.page-records .results-tab .ctrl .top,
+.page-records .results-tab .ctrl .bottom {
+  border: 3px solid transparent;
+  display: block;
+}
+.page-records .results-tab .ctrl .top {
+  border-bottom: 5px solid #434343;
+  margin-bottom: 1px;
+}
+.page-records .results-tab .ctrl .bottom {
+  border-top: 5px solid #434343;
+}
+.page-records .swiper-scrollbar {
+  border-radius: 0;
+  height: 10px;
+}
+.page-records .swiper-scrollbar-drag {
+  border-radius: 0;
+  background: #2a9cf9;
+}
+.page-records .page {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 0.52083333rem;
+}

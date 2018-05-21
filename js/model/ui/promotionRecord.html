@@ -1,0 +1,14 @@
+<% var tool = $tool(),win = $getCommonVal(),info = $business().orderStatus; %>
+<% if(list.length > 0){ %>
+<% for(var i = 0,len = win.Math.min(list.length,10);i < len;i ++){ %>
+<tr>
+    <td><%=tool.transferDateToString(new win.Date(list[i].createTime))%></td>
+    <td><%=list[i].eventName%></td>
+    <td><%=tool.formatCurrency(list[i].rewardAmount)%></td>
+    <td><%=info[list[i].status]%></td>
+    <!--<td><% if(list[i].status == 'Pending'){ %> <div class="UIButton" data-events="click:cancelPromotion" data-id="<%=list[i].proposalId%>"><div>取消</div></div> <% } %></td>-->
+</tr>
+<% } %>
+<% }else{ %>
+<tr><td colspan="4">暂无记录</td></tr>
+<% } %>

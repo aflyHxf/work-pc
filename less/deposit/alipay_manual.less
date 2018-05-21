@@ -1,0 +1,104 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.page-alipay-manual {
+  .pl145 {
+    .rem(padding-left, 145px);
+  }
+  .pt40 {
+    .rem(padding-top, 40px);
+  }
+  .input-row {
+    .rem(margin-bottom, 24px);
+    .rem(height, 32px);
+    .rem(line-height, 32px);
+    label {
+      .rem(width, 103px);
+      text-align: justify;
+      text-align-last: justify;
+    }
+    b{
+      float: left;
+    }
+    .UI-input-box {
+      .rem(width, 150px);
+      .rem(height, 32px);
+    }
+    .tips {
+      .rem(font-size, 12px);
+      .rem(padding-left, 16px);
+    }
+  }
+  .submit-form {
+    .btn-submit {
+      .width(150px);
+      .rem(margin-left, 105px);
+    }
+  }
+  .results-view {
+    .records-list {
+      .rem(margin-top, 23px);
+      .rem(margin-bottom, 23px);
+      .rem(font-size, 14px);
+      width: 100%;
+      th {
+        font-weight: bold;
+        border-bottom: 1px solid #dcdcdc;
+      }
+      th, td {
+        text-align: center;
+        .rem(line-height, 40px);
+      }
+    }
+    .blue {
+      color: #1e8fea;
+    }
+    .payment-node {
+      .rem(width, 300px);
+      .rem(height, 360px);
+      background-color: #eee;
+      display: inline-block;
+      h5 {
+        background-color: #1e8fea;
+        .rem(line-height, 70px);
+        text-align: center;
+        color: #ffffff;
+        .rem(font-size, 24px);
+        font-weight: bold;
+      }
+      .payment-content {
+        .rem(height, 208px);
+        .rem(line-height, 208px);
+      }
+      .foot p {
+        color: @blackColor;
+        .rem(font-size, 12px);
+        .rem(line-height, 24px);
+        text-align: left;
+        .rem2(padding, 0, 16px);
+      }
+      .qr-code {
+        .rem(height, 152px);
+        .rem(line-height, 152px);
+        vertical-align: middle;
+      }
+      .payment-info {
+        a{
+          display: block;
+          img{
+            height: 40px;
+            display: block;
+            margin: 10px auto;
+          }
+        }
+        font-weight: bold;
+        .rem(font-size, 18px);
+        .rem(line-height, 30px);
+        .rem2(padding, 0, 10px);
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}

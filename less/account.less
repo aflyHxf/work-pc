@@ -1,0 +1,179 @@
+@import (reference) "variable";
+@import (reference) "icon";
+
+@sidebarWidth: 200px;
+
+.page-account {
+  .btn-prime {
+    color: #fff;
+    .rem(border-radius, 4px);
+    background: @activeColor;
+  }
+  .banner-node {
+    .rem(height, 190px);
+    background: url("../images/personal-center-banner.jpg") no-repeat center;
+    .rem(background-size, 1920px);
+    border-bottom: 10px solid #1880d5;
+    .rem(border-bottom-size, 10px);
+    .rem(margin-bottom, 20px);
+  }
+  .page-inner-wrapper {
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      .rem(width, @sidebarWidth);
+      background: #1880d5;
+      height: 100%;
+    }
+  }
+  .sidebar-wrapper {
+    .rem(width, @sidebarWidth);
+    height: 100%;
+    background: #1880d5;
+    float: left;
+    position: relative;
+    z-index: 10;
+    .link {
+      .rem(line-height, 60px);
+      .rem(padding-left, 55px);
+      .rem(font-size, 18px);
+      color: #fff;
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover, &.active {
+        background-color: @pureBlueColor;
+      }
+      &.notice:after {
+        content: "new";
+        display: inline-block;
+        background: #5ac10c;
+        .rem(width, 50px);
+        .rem(height, 30px);
+        .rem(line-height, 30px);
+        .rem(border-radius, 18px);
+        text-align: center;
+        .rem(margin-left, 10px);
+        .rem(font-size, 12px);
+        animation: glint 0.8s infinite ease-in;
+      }
+    }
+    .drop-down{
+      padding-left: 0;
+      p {
+        .rem(padding-left, 55px);
+        position: relative;
+        &:before {
+          content: "";
+          border: 10px solid transparent;
+          border-left-color: #fff;
+          .rem(border-width, 8px);
+          position: absolute;
+          .rem(right, 16px);
+          .rem(top, 22px);
+          -webkit-transition: all .2s;
+          -moz-transition: all .2s;
+          -ms-transition: all .2s;
+          -o-transition: all .2s;
+          transition: all .2s;
+          -webkit-transform-origin: 25% center;
+          -moz-transform-origin: 25% center;
+          -ms-transform-origin: 25% center;
+          -o-transform-origin: 25% center;
+          transform-origin: 25% center;
+        }
+        &.show {
+          background-color: @pureBlueColor;
+          &:before {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+          }
+          & + .slide-node {
+            max-height: 800px;
+          }
+        }
+      }
+      .slide-node {
+        background-color: #0c6cb9;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s;
+        -webkit-transform-origin: 25% 50%;
+        -moz-transform-origin: 25% 50%;
+        -o-transform-origin: 25% 50%;
+        transform-origin: 25% 50%;
+        a {
+          .rem(line-height, 50px);
+          .rem(padding-left, 70px);
+          .rem(font-size, 16px);
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  .head-portrait {
+    .rem(width, 88px);
+    .rem(height, 88px);
+    margin: 0 auto;
+    border: 4px solid @activeColor;
+    .rem(border-size, 4px);
+    border-radius: 50%;
+    .rem(margin-top, 20px);
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .top-node {
+    .rem(height, 214px);
+    border-bottom: 1px solid #033d6c;
+    overflow: hidden;
+    p {
+      color: #fff;
+      .rem(font-size, 18px);
+      line-height: 100%;
+      .rem3(margin, 13px, 0, 16px);
+      text-align: center;
+    }
+    .btn-prime {
+      .rem(width, 160px);
+      .rem(height, 40px);
+      .rem(line-height, 40px);
+      .rem(font-size, 18px);
+      display: block;
+      margin: 0 auto;
+      text-decoration: none;
+    }
+  }
+  .content-wrapper {
+    overflow: hidden;
+    .rem(padding, 20px);
+  }
+}
+
+@keyframes glint {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}

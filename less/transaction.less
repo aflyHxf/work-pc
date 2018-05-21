@@ -1,0 +1,38 @@
+@import (reference) "variable";
+@import (reference) "icon";
+
+.page-transaction {
+  background: url("../images/deposit-banner.jpg") no-repeat center top;
+  .rem(background-size, 1920px);
+  .rem(padding-top, 150px);
+  .page-switch-nav {
+    .rem(height, 50px);
+    .rem(line-height, 50px);
+    font-size: 0;
+    a {
+      width: 50%;
+      .rem(font-size, 18px);
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      background-color: @skyBlueColor;
+      text-decoration: none;
+      &.active {
+        background: #1e8fea;
+      }
+    }
+  }
+  .page-inner-wrapper{
+    width: 1000px;
+  }
+  .page-inner-container {
+    width: 100%;
+    background-color: #fff;
+    .rem(padding, 20px);
+  }
+  .content {
+    border: 1px solid #dcdcdc;
+  }
+}

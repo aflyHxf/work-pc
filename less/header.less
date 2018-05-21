@@ -1,0 +1,122 @@
+@import (reference) "variable";
+@import (reference) "icon";
+
+.head {
+  background-color: @skyBlueColor;
+  .rem(height, @header_size);
+  .rem(line-height, @header_size);
+  .container {
+    .rem(width, 1168px);
+    margin: 0 auto;
+  }
+  .logo {
+    position: absolute;
+    img{
+      .width(262px);
+      .height(193px);
+    }
+  }
+  .col-right{
+    font-size: 0;
+  }
+  .login{
+    display: none;
+  }
+  .nav-wrap {
+    float: left;
+    .nav {
+      .rem2(padding, 0, 25px);
+      .rem(height, @header_size);
+      float: left;
+      text-align: center;
+      .rem(font-size, 18px);
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      font-weight: bold;
+      font-family: '幼圆', 'Microsoft YaHei UI Light';
+      &:hover, &.active{
+        color: @greenColor;
+        background-color: #064d86;
+        &:before {
+          display: block;
+        }
+      }
+      &:before {
+        content: '';
+        width: 100%;
+        .rem(height, 4px);
+        background: @greenColor;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+      }
+      &.npad {
+        padding: 0;
+        .rem(width, 130px);
+        z-index: 1;
+      }
+    }
+  }
+  .btn-prime {
+    background-color: #1e8fea;
+    .pl(20px);
+    .pr(20px);
+    .rem(letter-spacing,2px);
+    .rem(height, 40px);
+    .rem(line-height, 40px);
+    color: #ffff00;
+    .rem(font-size, 16px);
+    .rem(border-radius, 20px);
+    .rem(line-height, 40px);
+    .rem2(margin, 0, 5px);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .contact-menus {
+    width: 100%;
+    .rem(height, @header_size);
+    overflow: hidden;
+    &:hover {
+      height: auto;
+      position: absolute;
+    }
+    li {
+      width: 100%;
+      .rem(height, 90px);
+      .rem(height, 90px);
+      .rem(line-height, 64px);
+      .rem(font-size, 14px);
+      text-align: center;
+      background-color: #fff;
+      color: #1e8fea;
+      cursor: pointer;
+      &:hover {
+        background: #1e8fea;
+        color: #fff;
+        .icon-online-chat {
+          .icon-online-chat-active;
+        }
+        .icon-call {
+          .icon-call-active;
+        }
+        .icon-recall {
+          .icon-recall-active;
+        }
+        .icon-qq {
+          .icon-qq-active;
+        }
+        .icon-wechat {
+          .icon-wechat-active;
+        }
+      }
+    }
+    p {
+      line-height: 100%;
+    }
+    .icon {
+      line-height: 100%;
+    }
+  }
+}

@@ -1,0 +1,162 @@
+<div class="mid">
+    <% var info = $business() %>
+    <% var tool = $tool() %>
+
+    <% if(type == 'bet'){ %>
+    <table class="control">
+        <tr>
+            <td>
+                <label>游戏大厅</label>
+                <select class="UI-Select" v-input="lobby">
+                    <option value="">全部</option>
+                    <% for(var i = 0,len = data.providerList.length;i < len;i++){ %>
+                    <option value="<%=data.providerList[i].providerId%>"><%=info.provider[data.providerList[i].providerId]%></option>
+                    <% } %>
+                </select>
+            </td>
+            <td>
+                <label>起始时间</label>
+                <input type="text" class="UI-Input" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(1, 1)%>" data-element="startNode">
+            </td>
+            <td>
+                <label>结束时间</label>
+                <input type="text" class="UI-Input" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(0, 2)%>" data-element="endNode">
+            </td>
+            <td>
+                <div class="UIButton" data-events="click:betRecord;">
+                    <div>查询</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="bet">
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                总计(有效投注额:<span v-param="betAmount"></span>)
+            </td>
+        </tr>
+    </table>
+
+
+    <% }else if(type == 'recharge'){ %>
+
+    <table class="control">
+        <tr>
+            <td>
+                <label>充值方式</label>
+                <select class="UI-Select" v-input="type">
+                    <option value="2">在线充值</option>
+                    <option value="1">手工存款</option>
+                    <option value="3">支付宝充值</option>
+                    <option value="4">个人微信</option>
+                </select>
+            </td>
+            <td>
+                <label>起始时间</label>
+                <input type="text" class="UI-Input" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(1, 1)%>" data-element="startNode">
+            </td>
+            <td>
+                <label>结束时间</label>
+                <input type="text" class="UI-Input" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(0, 2)%>" data-element="endNode">
+            </td>
+            <td>
+                <div class="UIButton" data-events="click:savingRecord;">
+                    <div>查询</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="recharge">
+        <tr class="black">
+            <th>订单号</th>
+            <th>订单时间</th>
+            <th>充值金额</th>
+            <th>充值方式</th>
+        </tr>
+        <tbody class="rechargeTable"></tbody>
+    </table>
+    <div class="page-controller">
+
+    </div>
+    <% }else if(type == 'withdraw'){ %>
+
+    <table class="control">
+        <tr>
+            <td>
+                <label>状态</label>
+                <select class="UI-Select" v-input="status">
+                    <option value="">请选择</option>
+                    <% for( i in info.orderStatus){%>
+                    <option value="<%=i%>"><%=info.orderStatus[i]%></option>
+                    <% } %>
+                </select>
+            </td>
+            <td>
+                <label>起始时间</label>
+                <input type="text" class="UI-Input" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(1, 1)%>" data-element="startNode">
+            </td>
+            <td>
+                <label>结束时间</label>
+                <input type="text" class="UI-Input" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(0, 2)%>" data-element="endNode">
+            </td>
+            <td>
+                <div class="UIButton" data-events="click:withdrawRecord;">
+                    <div>查询</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="withdraw">
+        <tr class="black">
+            <th>订单号</th>
+            <th>提款时间</th>
+            <th>提款金额</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        <tbody class="withdrawTable"></tbody>
+    </table>
+    <div class="page-controller">
+
+    </div>
+    <% }else if(type == 'promotion'){ %>
+
+    <table class="control">
+        <tr>
+            <td>
+                <label>起始时间</label>
+                <input type="text" class="UI-Input" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(1, 1)%>">
+            </td>
+            <td>
+                <label>结束时间</label>
+                <input type="text" class="UI-Input" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(0, 2)%>">
+            </td>
+            <td>
+                <div class="UIButton" data-events="click:promotionRecord;">
+                    <div>查询</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="promotion">
+        <tr class="black">
+            <th>时间</th>
+            <th>优惠类型</th>
+            <th>优惠金额</th>
+            <th>状态</th>
+            <!--<th>操作</th>-->
+        </tr>
+        <tbody class="promotionTable"></tbody>
+    </table>
+    <div class="page-controller">
+    </div>
+
+    <% }else{ %>
+
+    <div>报表类型错误</div>
+
+    <% } %>
+</div>

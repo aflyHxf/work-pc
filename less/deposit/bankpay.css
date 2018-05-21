@@ -1,0 +1,54 @@
+.page-bankpay .tips-node {
+  margin-bottom: 2.08333333rem;
+}
+.page-bankpay .submit-form .input-row {
+  padding-left: 7.55208333rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.66666667rem;
+  height: 1.66666667rem;
+}
+.page-bankpay .submit-form .input-row label {
+  width: 5.3125rem;
+}
+.page-bankpay .submit-form .input-row .UI-input-box {
+  width: 7.8125rem;
+  height: 1.66666667rem;
+}
+.page-bankpay .submit-form .input-row .UI-input-box.max-width {
+  width: 18.22916667rem;
+}
+.page-bankpay .submit-form .address-node .UI-input-box {
+  width: 5.98958333rem;
+  margin-right: 0.26041667rem;
+}
+.page-bankpay .submit-form .btn-submit {
+  margin-left: 26.66666667rem;
+}
+.page-bankpay .payment-node {
+  width: 18.75rem;
+  height: 16.35416667rem;
+  background-color: #eee;
+}
+.page-bankpay .payment-node h5 {
+  background-color: #1e8fea;
+  line-height: 3.64583333rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.page-bankpay .payment-node p {
+  font-size: 0.72916667rem;
+  margin-bottom: 1.5625rem;
+}
+.page-bankpay .payment-node .bold {
+  font-size: 0.9375rem;
+  font-weight: bold;
+  padding-left: 0.78125rem;
+}
+.page-bankpay .payment-node span {
+  vertical-align: middle;
+}
+.page-bankpay .p20 {
+  padding: 1.04166667rem;
+}

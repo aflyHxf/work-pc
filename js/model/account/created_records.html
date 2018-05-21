@@ -1,0 +1,75 @@
+<% var tool = $tool() %>
+<div class="page-records page-createdrecords">
+    <h1>开户分析表</h1>
+    <form action="" class="condition-form">
+        <table class="row">
+            <tr>
+                <td>
+                    <label for="beginTime">开始时间：</label>
+                    <div class="UI-input-box"><input type="text" class="UI-Input" id="beginTime" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(1, 1)%>" data-element="startNode"></div>
+                </td>
+                <td>
+                    <label for="endTime">结束时间：</label>
+                    <div class="UI-input-box"><input type="text" class="UI-Input" id="endTime" data-events="click:date;" readonly="readonly" value="<%=tool.getOneDateBeforeToday(0, 2)%>" data-element="endNode"></div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="domain">注册网址：</label>
+                    <div class="UI-input-box"><input type="text" class="UI-Input" id="domain" data-element="domain"></div>
+                </td>
+                <td>
+                    <label for="userAccount">会员账号：</label>
+                    <div class="UI-input-box"><input type="text" class="UI-Input" id="userAccount" data-element="playerName"></div>
+                </td>
+                <td>
+                    <label for="pageCount">每页：</label>
+                    <div class="UI-input-box">
+                        <select id="pageCount" v-input="every">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="row">
+            <div class="col-right">
+                <div class="UIButton" data-events="click:submit;">
+                    <div>
+                        查询
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="search-results-view">
+        <div class="swiper-container" data-element="swiperNode">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <table class="results-tab">
+                        <tr>
+                            <th>账号 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>姓名 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>存款笔数 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>开户时间 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>登入时间 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>Ip <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                            <th>注册网址 <i class="ctrl"><span class="top"></span><span class="bottom"></span></i></th>
+                        </tr>
+                        <tbody class="createReport">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-scrollbar" data-element="scrollbarNode"></div>
+        <div class="page-controller">
+
+        </div>
+    </div>
+</div>

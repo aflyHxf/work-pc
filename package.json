@@ -1,0 +1,34 @@
+{
+  "name": "mcm-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.neweb.me/wildechen/monaco1MobileFramework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "requirejs": "^2.3.2",
+    "sprity": "^1.0.8"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-less": "^3.3.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "imageinfo": "^1.0.4",
+    "less-plugin-autoprefix": "^1.5.1",
+    "run-sequence": "^1.2.2",
+    "sprity": "^1.0.8",
+    "through2": "^2.0.3",
+    "upng": "^1.0.1"
+  }
+}

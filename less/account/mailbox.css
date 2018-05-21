@@ -1,0 +1,54 @@
+.page-mailbox {
+  font-size: 0.9375rem;
+  color: #434343;
+}
+.page-mailbox .notice {
+  font-size: 1.04166667rem;
+  text-align: center;
+  height: 2.08333333rem;
+  line-height: 2.08333333rem;
+}
+.page-mailbox .messages-list {
+  width: 100%;
+}
+.page-mailbox .messages-list li {
+  border-bottom: 1px solid #dcdcdc;
+}
+.page-mailbox .messages-list .icon-email-blue {
+  margin-right: 0.52083333rem;
+}
+.page-mailbox .messages-list span {
+  vertical-align: middle;
+}
+.page-mailbox .messages-list .show .message-title {
+  color: #2a9cf9;
+}
+.page-mailbox .messages-list .show .message-content {
+  max-height: 1000px;
+}
+.page-mailbox .message-title {
+  height: 3.125rem;
+  line-height: 3.125rem;
+  padding: 0rem 1.30208333rem;
+  background-color: #eee;
+  cursor: pointer;
+}
+.page-mailbox .message-content {
+  font-size: 0.83333333rem;
+  line-height: 1.5625rem;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -ms-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+}
+.page-mailbox .message-content .view {
+  padding: 1.04166667rem 3.02083333rem;
+}
+.page-mailbox .m-point {
+  color: #2a9cf9;
+  display: inline-block;
+  width: 1.04166667rem;
+}

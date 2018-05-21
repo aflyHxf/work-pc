@@ -1,0 +1,23 @@
+<div class="page-transaction">
+    <div class="page-inner-wrapper">
+        <div class="page-switch-nav">
+            <a href="#wechatpay_manual?pid=transaction" class="active">充值</a>
+            <a href="#withdrawals?pid=transaction">提款</a>
+        </div>
+        <div class="page-inner-container">
+            <div class="content page-deposit">
+                <div class="left-sidebar" data-element="navBarNode">
+                    <% var url = $tool().url(); %>
+                    <!-- <a href="#wechatpay?pid=transaction" <%if(url.hash=="wechatpay"){%>class="active"<%}%>><i class="icon icon-sm-wechat"></i><span>微信扫码充值</span></a> -->
+                    <a href="#alipay_manual?pid=transaction" <%if(url.hash=="alipay_manual"){%>class="active"<%}%>><i class="icon icon-sm-alipay"></i><span>支付宝手工充值</span></a>
+                    <a href="#wechatpay_manual?pid=transaction" <%if(url.hash=="wechatpay_manual"){%>class="active"<%}%>><i class="icon icon-sm-wechat"></i><span>微信充值</span></a>
+                    <!-- <a href="#alipay?pid=transaction" <%if(url.hash=="alipay"){%>class="active"<%}%>><i class="icon icon-sm-alipay"></i><span>支付宝扫码充值</span></a> -->
+                    <a href="#onlinepay?pid=transaction" <%if(url.hash=="onlinepay"){%>class="active"<%}%>><i class="icon icon-sm-unionpay"></i><span>在线支付</span></a>
+                    <!-- <a href="#unionpay?pid=transaction" <%if(url.hash=="unionpay"){%>class="active"<%}%>><i class="icon icon-sm-unionpay"></i><span>在线支付(支持信用卡)</span></a> -->
+                    <a href="#bankpay?pid=transaction" <%if(url.hash=="bankpay"){%>class="active"<%}%>><i class="icon icon-sm-bank"></i><span>手工存款</span></a>
+                </div>
+                <div class="main-content" id="mainContent"></div>
+            </div>
+        </div>
+    </div>
+</div>

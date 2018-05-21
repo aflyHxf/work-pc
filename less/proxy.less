@@ -1,0 +1,42 @@
+@import (reference) "variable";
+@import (reference) "icon";
+
+.page-proxy {
+  background: url("../images/proxy-banner.jpg") no-repeat center top;
+  .rem(background-size, 1920px);
+  .rem(padding-top, 200px);
+  .bold {
+    font-weight: bold;
+  }
+  .mb30 {
+    .rem(margin-bottom, 30px);
+  }
+  article {
+    .rem3(padding, 0, 60px, 80px);
+    background: #fff;
+    overflow: hidden;
+  }
+  h4 {
+    .rem(margin-top, 38px);
+    .rem(line-hight, 43px);
+    .rem(font-size, 30px);
+    .rem(padding-left, 6px);
+    .rem(border-left-width, 4px);
+    border-style: solid;
+    border-color: #1e8fea;
+    font-weight: bold;
+  }
+  p {
+    .rem(line-height, 30px);
+    .rem(font-size, 14px);
+  }
+  .btn-submit {
+    background: none;
+    .icon;
+    .icon-submit;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    .rem(margin-top, 40px);
+  }
+}

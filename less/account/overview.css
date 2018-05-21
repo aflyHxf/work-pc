@@ -1,0 +1,176 @@
+.page-overview {
+  padding-top: 1.5625rem;
+}
+.page-overview .blue {
+  color: #1880d5;
+}
+.page-overview .bold {
+  font-weight: bold;
+}
+.page-overview .mb30 {
+  margin-bottom: 1.5625rem;
+}
+.page-overview .mr30 {
+  margin-right: 1.5625rem;
+}
+.page-overview .middle {
+  vertical-align: middle;
+}
+.page-overview .btn-prime {
+  width: 2.60416667rem;
+  height: 1.5625rem;
+  line-height: 1.5625rem;
+  color: #fff;
+  background: #2a9cf9;
+  font-size: 0.72916667rem;
+  text-decoration: none;
+}
+.page-overview .section-title {
+  margin-bottom: 1.04166667rem;
+}
+.page-overview .section-title > span {
+  font-size: 0.9375rem;
+  color: #2a9cf9;
+  font-weight: bold;
+  border-left: 4px solid #2a9cf9;
+  border-left-width: 0.20833333rem;
+  padding-left: 0.52083333rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.page-overview .amount-setting {
+  font-size: 0;
+  padding-left: 3.64583333rem;
+  margin-top: -0.3125rem;
+}
+.page-overview .amount-setting .amount {
+  font-size: 1.35416667rem;
+  font-weight: bold;
+  color: #2a9cf9;
+  vertical-align: middle;
+  margin-right: 1.04166667rem;
+}
+.page-overview .amount-setting .btn-prime {
+  margin: 0rem 0.52083333rem;
+}
+.page-overview .amount-setting .tips-node {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.52083333rem;
+}
+.page-overview .amount-setting .tips-node:hover span {
+  display: inline-block;
+}
+.page-overview .amount-setting .tips-node span {
+  display: none;
+  vertical-align: middle;
+  line-height: 1.35416667rem;
+  background-color: #dcdcdc;
+  font-size: 12px;
+  color: #434343;
+  padding: 0rem 0.52083333rem;
+  position: relative;
+  margin-left: 0.67708333rem;
+}
+.page-overview .amount-setting .tips-node span:before {
+  content: '';
+  border: 13px solid transparent;
+  border-width: 0.67708333rem;
+  border-right-color: #dcdcdc;
+  position: absolute;
+  right: 100%;
+  top: 0;
+}
+.page-overview .section-wrapper {
+  width: 100%;
+  font-size: 0.72916667rem;
+  margin-bottom: 1.04166667rem;
+  color: #434343;
+}
+.page-overview .section-table th {
+  background-color: #c9e5fc;
+}
+.page-overview .section-table th,
+.page-overview .section-table td {
+  line-height: 2.60416667rem;
+  text-align: center;
+}
+.page-overview .section-table td {
+  border-bottom: 1px solid #dcdcdc;
+}
+.page-overview .section-table td:first-child {
+  border-left: 1px solid #dcdcdc;
+}
+.page-overview .section-table td:last-child {
+  border-right: 1px solid #dcdcdc;
+}
+.page-overview .section-promotion-information .section-head {
+  background-color: #c9e5fc;
+  line-height: 2.60416667rem;
+  padding: 0rem 1.04166667rem;
+}
+.page-overview .section-promotion-information .section-body {
+  border: 1px solid #dcdcdc;
+  border-top: none;
+  padding: 0.83333333rem 1.14583333rem;
+}
+.page-overview .section-promotion-information .label-progress {
+  vertical-align: text-bottom;
+  margin-right: 0.52083333rem;
+}
+.page-overview .section-promotion-information .progress-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+.page-overview .section-promotion-information .UI-progress {
+  width: 22.65625rem;
+}
+.page-overview .section-promotion-information .UI-progress .line-current .circle-group {
+  width: 22.65625rem;
+}
+.page-overview .section-promotion-information .active-promotion {
+  display: inline-block;
+  vertical-align: middle;
+}
+.page-overview .section-promotion-information .active-promotion a {
+  text-decoration: underline;
+}
+.page-overview .section-promotion-information .label {
+  color: #fff;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 16px;
+  line-height: 16px;
+  position: relative;
+  text-align: center;
+  margin-left: 1.04166667rem;
+}
+.page-overview .section-promotion-information .label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2a9cf9;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+.page-overview .section-promotion-information .label span {
+  z-index: 10;
+  position: relative;
+}
+.page-overview .section-promotion-information .btn-normal {
+  width: 4.6875rem;
+  height: 1.5625rem;
+  line-height: 1.45833333rem;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  color: #434343;
+  background: linear-gradient(to top, #dbebf9, #ffffff);
+}

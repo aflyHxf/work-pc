@@ -1,0 +1,140 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+@backgroundColor: #bfbfbf;
+@currentProgressColor: #2a9cf9;
+//@boxHeight: 8px;
+@progressHeight: 10px;
+@progressContentHeight: 6px;
+@roundSize: @progressHeight * 1.6;
+@fontSize: 14px;
+
+.UI-progress {
+  padding: 12px 0 0px;
+  position: relative;
+  font-size: @fontSize;
+  .line-container {
+    width: 100%;
+    position: relative;
+    height: @roundSize;
+  }
+  .circle-group {
+    width: 100%;
+    position: absolute;
+    span {
+      width: @roundSize;
+      height: @roundSize;
+      border-radius: 50%;
+      background: @backgroundColor;
+      position: absolute;
+      transform: translateX(-50%);
+      &:first-child {
+        transform: translateX(0);
+      }
+      &:last-child {
+        transform: translateX(-100%);
+      }
+    }
+  }
+  .line {
+    width: 100%;
+    background: @backgroundColor;
+    height: @progressHeight;
+    border-radius: 6px;
+    position: relative;
+    top: (@roundSize - @progressHeight) / 2;
+  }
+  .line-background {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .line-current {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: width ease-in-out 1s;
+    will-change: with;
+    .box {
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+      height: @roundSize;
+      top: 0;
+    }
+    .line {
+      background: @currentProgressColor;
+      height: @progressContentHeight;
+      margin-top: (@progressHeight - @progressContentHeight) / 2;
+    }
+    .circle-group {
+      span {
+        background: @currentProgressColor;
+        border: ((@progressHeight - @progressContentHeight) / 2) solid @backgroundColor;
+      }
+    }
+  }
+  .hide-beyond-line {
+    width: 100%;
+    height: @roundSize;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    &:before, &:after {
+      content: "";
+      box-sizing: border-box;
+      width: @roundSize;
+      height: @roundSize;
+      display: block;
+      border-radius: 50%;
+      border: ((@progressHeight - @progressContentHeight) / 2) solid transparent;
+    }
+    &:before {
+      border-left-color: @backgroundColor;
+      float: left;
+    }
+    &:after {
+      border-right-color: @backgroundColor;
+      float: right;
+    }
+  }
+  .count-numer {
+    position: absolute;
+    white-space: nowrap;
+    top: -12px;
+    right: -8px;
+    color: #424242;
+    line-height: 100%;
+    span{
+      .font-size(14px);
+    }
+    &:after {
+      content: "";
+      display: inline-block;
+      vertical-align: baseline;
+      border: 0 solid transparent;
+      border-width: 8px 5px 0;
+      border-top-color: @currentProgressColor;
+    }
+  }
+  .progress-targes {
+    width: 100%;
+    color: #424242;
+    line-height: 100%;
+    .mt(2px);
+    height: @fontSize;
+    span {
+      position: absolute;
+      .font-size(14px);
+      transform: translateX(-50%);
+      &:first-child {
+        transform: translateX(0);
+      }
+      &:last-child {
+        transform: translateX(-100%);
+      }
+    }
+  }
+}

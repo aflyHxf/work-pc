@@ -1,0 +1,92 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.page-records {
+  color: #434343;
+  h1 {
+    font-weight: bold;
+    .rem(font-size, 24px);
+    border-left: 6px solid #434343;
+    .rem(border-left-width, 6px);
+    line-height: 100%;
+    .rem(padding-left, 12px);
+  }
+  .condition-form {
+    label {
+      width: 72px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 14px;
+      font-weight: bold;
+      float: left;
+      text-align:justify ;
+      text-align-last:justify;
+    }
+    input:not([type="submit"]), select {
+      height: 32px;
+      background: #fff;
+      border: 1px solid #b7b7b7;
+      border-radius: 2px;
+    }
+    .UI-input-box {
+      background: none;
+    }
+    .col-4:nth-child(2) {
+      .rem(padding-left, 10px);
+    }
+    .row {
+      .rem(margin-bottom, 18px);
+    }
+    .btn-submit {
+      .rem(width, 90px);
+      .rem(height, 32px);
+      color: #fff;
+      background-color: #2a9cf9;
+      border-radius: 4px;
+    }
+  }
+  .results-tab {
+    table-layout: fixed;
+    border: 1px solid #dcdcdc;
+    td, th {
+      .rem(width, 130px);
+      .rem(line-height, 50px);
+      border-bottom: 1px solid #dcdcdc;
+      text-align: center;
+    }
+    th {
+      font-size: 14px;
+      background: #c9e5fb;
+
+    }
+    .ctrl {
+      display: inline-block;
+      vertical-align: sub;
+      cursor: pointer;
+      .top, .bottom {
+        border: 3px solid transparent;
+        display: block;
+      }
+      .top {
+        border-bottom: 5px solid #434343;
+        margin-bottom: 1px;
+      }
+      .bottom {
+        border-top: 5px solid #434343;
+      }
+    }
+  }
+  .swiper-scrollbar {
+    border-radius: 0;
+    height: 10px;
+  }
+  .swiper-scrollbar-drag {
+    border-radius: 0;
+    background: #2a9cf9;
+  }
+  .page{
+    width: 80%;
+    margin: 0 auto;
+    .mt(10px);
+  }
+}

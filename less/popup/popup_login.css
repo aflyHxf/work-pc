@@ -1,0 +1,36 @@
+.popup-login:before {
+  content: "";
+  position: absolute;
+  background: url("../images/popup-login-widget.png");
+  background-size: 100%;
+  width: 11.51041667rem;
+  height: 16.71875rem;
+  top: 8.90625rem;
+  right: -6.77083333rem;
+  z-index: 10;
+  pointer-events: none;
+}
+.popup-login .body {
+  padding-top: 2.08333333rem;
+  padding-bottom: 1.82291667rem;
+}
+.popup-login .submit {
+  margin: 0 auto;
+  margin-top: 0.9375rem;
+}
+.popup-login .right-side img {
+  right: 1.30208333rem;
+}
+.popup-login .foot {
+  width: 18.22916667rem;
+  margin: 0 auto;
+}
+.popup-login .foot a {
+  font-size: 0.72916667rem;
+  color: #434343;
+  line-height: 100%;
+  margin-top: 0.83333333rem;
+  display: block;
+  cursor: pointer;
+  text-decoration: underline;
+}

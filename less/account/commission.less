@@ -1,0 +1,28 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.page-commision {
+  color: #434343;
+  .swiper-slide, .results-tab {
+    width: 1040px;
+  }
+  .tips {
+    font-size: 12px;
+    margin-bottom: 10px;
+    span {
+      color: #ffbd00;
+    }
+  }
+
+  table{
+    &.row{
+      table-layout: fixed;
+      td{
+        .pl(10px);
+      }
+      input,select{
+        width: 100%;
+      }
+    }
+  }
+}

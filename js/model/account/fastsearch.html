@@ -1,0 +1,133 @@
+<%
+    var Date = $getCommonVal().Date;
+    var user = $mcm().cache.getUserInfoFromCache();
+%>
+<div class="page-fastsearch">
+    <div class="promotion-node mb10">
+        <div class="promotion-link-node">
+            <div class="row">
+                <label>推广连接：</label>
+                <div class="UI-input-box"><input type="text" value="<%=data.getDomainList.playerSpreadUrl + '/#register?r=p' + user['name']%>" id="speardUrlNode" readonly><button class="btn btn-submit" data-element="copyMenuNode" data-clipboard-target="#speardUrlNode">复制链接</button></div>
+            </div>
+            <p>提示：通过此链接注册的会员，将自动设置为您的下线会员。</p>
+        </div>
+        <div class="promotion-time">
+            <div class="row">
+                <h4 v-param="monthTimeLeft">00天00时00分</h4>
+                <p>距离获得高额佣金倒数</p>
+            </div>
+            <div class="row">
+                <div class="col-4 text-center" data-events="click: openPopupOfRegister;"><i class="icon icon-person"></i><span>会员开户</span></div>
+                <div class="col-4 text-center" data-events="click: giveTips;"><i class="icon icon-transfer"></i><span>额度转移</span></div>
+                <div class="col-4 text-center" data-events="click: openPopupOfWithdrawal;"><i class="icon icon-bank"></i><span>申请提款</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb10">
+        <div class="report-node">
+            <table>
+                <tr>
+                    <td>
+                        <div class="swiper-container" id="amountDataSwipeNode">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h4>本月总存款</h4>
+                                    <p>人民币</p>
+                                    <p class="strong" v-param="monthTopUp">获取中</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h4>本月总取款</h4>
+                                    <p>人民币</p>
+                                    <p class="strong" v-param="monthGetBonus">获取中</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h4>本月总取款</h4>
+                                    <p>人民币</p>
+                                    <p class="strong" v-param="monthBonus">获取中</p>
+                                </div>
+                            </div>
+                            <div class="swiper-navbar"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="swiper-container" id="clientDataSwipeNode">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h4>累计总开户人数</h4>
+                                    <%
+                                        var yesterday = new Date();
+                                        var now = new Date();
+                                        yesterday.setDate(1);
+                                        var startTime = $tool().formatDate(yesterday, 'y/m/d');
+                                        var endTime = $tool().formatDate(now, 'y/m/d');
+                                    %>
+                                    <p><%=startTime%>-<%=endTime%></p>
+                                    <p class="strong" v-param="totalNewPlayers">获取中</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h4>累计总存款人数</h4>
+                                    <p>含有效会员</p>
+                                    <p class="strong" v-param="totalTopUpPlayers">获取中</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h4>累计有效会员</h4>
+                                    <p>本月存款500元以上</p>
+                                    <p class="strong" v-param="totalValidPlayers">获取中</p>
+                                </div>
+                            </div>
+                            <div class="swiper-navbar"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="swiper-container" id="extraDataSwipeNode">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h4>目前累计佣金</h4>
+                                    <p>人民币RMB</p>
+                                    <p class="strong" v-param="commissionValue">获取中</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h4>目前累计有效会员</h4>
+                                    <p>每月有效会员需达5人以上</p>
+                                    <p class="strong" v-param="totalValidPlayers">获取中</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h4>合营佣金比例</h4>
+                                    <p>总代理可以获取下线代理佣金的额外10%</p>
+                                    <!--<p class="strong">获取中</p>-->
+                                </div>
+                            </div>
+                            <div class="swiper-navbar"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <table class="graph-tab">
+            <tr>
+                <td>
+                    <div class="graph-wrapper">
+                        <div class="graph-title">
+                            <!--<h5>存取款报表</h5>-->
+                            <!--<p>03月17日-03月23日</p>-->
+                            <h2>存取款报表</h2>
+                        </div>
+                        <div class="graph-view"><p>敬请期待！！</p></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="graph-wrapper">
+                        <div class="graph-title">
+                            <!--<h5>存取款报表</h5>-->
+                            <!--<p>03月17日-03月23日</p>-->
+                            <h2>新会员存款走势</h2>
+                        </div>
+                        <div class="graph-view"><p>敬请期待！！</p></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

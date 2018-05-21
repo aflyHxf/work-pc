@@ -1,0 +1,36 @@
+<div class="page-unionpay">
+    <% if (1) { %>
+    <form action="" class="submit-form">
+        <div class="tips-node"><span>友情提示：</span>请于下方『充值金额』框架输入您所需要充值的金额，点击提交（最低充值金额50元人民币）。确认提交后，将新开充值页面，请依照页面提示一步步操作至扣款成功。</div>
+        <span class="img-computer"></span>
+        <div class="input-row">
+            <div class="inputArea">
+                <label for="amount">充值金额：</label>
+                <input type="number" id="amount" name="amount" v-input="amount" class="UI-Input">
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn btn-submit">提交</button>
+        </div>
+    </form>
+    <% } else { %>
+    <div class="tips-node"><span>温馨提示：</span>下方将出现您充值的详情，提供会员核对充值金额是否到帐。如遇网路延迟，请点击刷新按钮，谢谢。</div>
+    <div class="results-view">
+        <ul class="order-details">
+            <li><span class="label">单号 :</span><span>2016061100302</span></li>
+            <li><span class="label">时间：</span><span>6月11日17:50</span></li>
+            <li><span class="label">金额：</span><span class="blue">100.00</span></li>
+            <li><span class="label">有效：</span><span class="blue">00:50分钟</span></li>
+            <li><span class="label">状态：</span><span class="blue">审核中...</span></li>
+            <li>
+                <span class="label">操作：</span>
+                <button class="btn btn-submit">刷新</button>
+            </li>
+        </ul>
+    </div>
+    <div class="footnote">
+        <h5>微信扫描二维码支付</h5>
+        <p>请于以上“充值金额”处填写您需要充值的金额，然后点击提交，跳转到二维码页面后，打开微信，点击右上角的+号，使用扫一扫功能扫描网页上的二维码并付款后就充值成功啦！</p>
+    </div>
+    <% } %>
+</div>

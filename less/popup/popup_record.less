@@ -1,0 +1,66 @@
+@import (reference) "../variable";
+@import (reference) "../icon";
+
+.popup-record {
+  .rem(width, 636px);
+  .rem(height, 534px);
+  .switch-module-container {
+    position: relative;
+    .rem(height, 320px);
+    .rem2(margin, 22px, 0);
+    .menu {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      cursor: pointer;
+      margin: auto;
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+    .menu-previous {
+      .icon;
+      .icon-menu-previous;
+      .rem(left, 20px);
+    }
+    .menu-next {
+      .icon;
+      .icon-menu-next;
+      .rem(right, 20px);
+    }
+  }
+  .switch-box {
+    .rem(font-size, 16px);
+    .rem(line-height, 28px);
+    .record {
+      margin: 0 auto;
+      text-align: left;
+      background: #c9e5fb;
+      .rem(border-radius, 4px);
+      .rem(width, 430px);
+      .rem(height, 100px);
+      .rem(margin-bottom, 10px);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    label {
+      display: block;
+      height: 100%;
+      .rem3(padding, 6px, 16px, 0);
+      * {
+        pointer-events: none;
+      }
+    }
+    input {
+      display: none;
+      &:checked + label {
+        background: #1e8feb;
+        color: #fff;
+      }
+    }
+  }
+  .submit {
+    display: inline-block;
+  }
+}

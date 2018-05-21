@@ -1,0 +1,194 @@
+<%
+    var user = $mcm().cache.getUserInfoFromCache();
+    var business = $business();
+%>
+<div class="page-personal">
+    <div class="row">
+        <h2>会员基本信息</h2>
+        <form class="form-node">
+
+
+            <div class="inline left-side vertical-top mr30">
+                <div class="inner-row">
+                    <label>會員等級</label>
+                    <span class="current-val"><%= user.playerLevel.name %></span>
+                </div>
+                <div class="inner-row">
+                    <label>真实姓名</label>
+                    <span class="current-val"><%=user.realName%></span>
+                </div>
+                <div class="inner-row">
+                    <label>绑定电话</label>
+                    <span class="current-val"><%=user.phoneNumber%></span>
+                </div>
+                <div class="inner-row">
+                    <label>绑定邮箱</label>
+                    <span class="current-val"><%=user.email%></span>
+                </div>
+                <div class="inner-row">
+                    <label>开户时间</label>
+                    <span class="current-val"><%=$tool().formatDate(user.registrationTime, 'y-m-d h:i:s')%></span>
+                </div>
+                <div class="inner-row">
+                    <label>客户ID</label>
+                    <span class="current-val"><%=user.playerId%></span>
+                </div>
+                <div class="inner-row">
+                    <label>登陆密码</label>
+                    <span class="current-val blue">******</span>
+                </div>
+            </div>
+            <div class="inline vertical-bottom">
+                <input type="button" class="btn btn-submit" value="修改" data-events="click: openModifyPasswordPopup;">
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <h2>提款银行资料</h2>
+        <% var hasBindBankAccount = user.bankAccount; %>
+        <form class="form-node" data-element="bankFormNode" <%if (!hasBindBankAccount) {%>style="display: block;"<%}else{%>style="display: none;"<%}%>>
+            <div class="inline left-side vertical-top mr30">
+                <div class="inner-row">
+                    <label for="accountName">收款人</label>
+                    <div class="UI-input-box">
+                        <input type="text" id="accountName" name="bankAccountName" value="<%=user.realName%>">
+                    </div>
+                </div>
+                <div class="inner-row">
+                    <label for="accountNum">银行卡号</label>
+                    <div class="UI-input-box">
+                        <input type="number" id="accountNum" name="bankAccount">
+                    </div>
+                </div>
+                <div class="inner-row">
+                    <label for="bankName">银行行别</label>
+                    <div class="UI-input-box">
+                        <select name="bankName" id="bankName">
+                            <option value=""></option>
+                            <% for (var i = 0; i < data.bankList.length; i++) { %>
+                                <option value="<%=data.bankList[i].id%>"><%=data.bankList[i].name%></option>
+                            <% } %>
+                        </select>
+                    </div>
+                </div>
+                <div class="inner-row">
+                    <label for="bankAccountType">账户性质</label>
+                    <div class="UI-input-box">
+                        <select name="bankAccountType" id="bankAccountType">
+                            <option value=""></option>
+                            <option value="1">信用卡</option>
+                            <option value="2">借记卡</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inner-row">
+                    <label>开户城市</label>
+                    <div class="input-tab" data-element="addressNode">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="UI-input-box">
+                                        <select name="bankAccountProvince" id="province"></select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="UI-input-box">
+                                        <select name="bankAccountCity" id="city"></select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="UI-input-box">
+                                        <select name="bankAccountDistrict" id="area"></select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="inner-row">
+                    <label>银行网点</label>
+                    <div class="UI-input-box">
+                        <input type="text" name="bankAddress">
+                    </div>
+                </div>
+                <div class="inner-row">
+                    <label>SMS 验证码</label>
+                    <div class="input-tab">
+                        <table>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="UI-input-box">
+                                        <input type="text" name="smsCode">
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" class="UI-input-box btn btn-submit" id="requestSMSCodeForBank" data-events="click: requestSMSCode;">获取验证码</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="inline vertical-bottom">
+                <input type="submit" class="btn btn-submit" value="确认">
+            </div>
+        </form>
+        <form class="form-node" data-element="bankInfoNode" <%if (hasBindBankAccount) {%>style="display: block;"<%}else{%>style="display: none;"<%}%>>
+            <div class="inline left-side vertical-top mr30">
+                <div class="inner-row">
+                    <label>收款人</label>
+                    <span class="current-val"><%=user.bankAccountName%></span>
+                </div>
+                <div class="inner-row">
+                    <label>银行卡号</label>
+                    <span class="current-val"><%=user.bankAccount%></span>
+                </div>
+                <div class="inner-row">
+                    <label>银行行别</label>
+                    <%
+                        var bankName;
+                        for (var i = 0; i < data.bankList.length; i++) {
+                            if (user.bankName == data.bankList[i].id )
+                                bankName = data.bankList[i].name
+                        }
+                    %>
+                    <span class="current-val"><%=bankName%></span>
+                </div>
+                <div class="inner-row">
+                    <label>账户性质</label>
+                    <span class="current-val"><%=user.bankAccountType == 1 ? '信用卡' : '借记卡'%></span>
+                </div>
+                <div class="inner-row">
+                    <label>开户城市</label>
+                    <span class="current-val"><%=user.bankAccountProvince + user.bankAccountCity + (user.bankAccountDistrict || '')%></span>
+                </div>
+                <div class="inner-row">
+                    <label>银行网点</label>
+                    <span class="current-val"><%=user.bankAddress%></span>
+                </div>
+            </div>
+            <div class="inline vertical-bottom">
+                <input type="button" class="btn btn-submit" value="修改" data-events="click: openModifyBankPopup;">
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <h2>短信提醒设置</h2>
+        <form class="form-node" data-element="smsSettingFormNode" data-events="submit: smsSettingSubmit;">
+            <div class="inline left-side vertical-top mr30">
+                <% var settings = $mcm().getSmsSettings(data.smsSettings); %>
+                <% data.smsSettings = settings; %>
+                <% for (var i in settings) { %>
+                    <div class="checkbox-node" style="display:block;">
+                        <input type="checkbox" name="<%=i%>" id="<%=i%>" <%if(settings[i].isTrue){%>checked<%}%>>
+                        <label for="<%=i%>"><b><%=i%></b></label>
+                    </div>
+                <% } %>
+
+            </div>
+            <div class="inline vertical-bottom">
+                <input type="submit" class="btn btn-submit mb15" value="确认">
+            </div>
+        </form>
+    </div>
+</div>

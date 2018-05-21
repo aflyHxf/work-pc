@@ -1,0 +1,32 @@
+.page-unionpay .img-computer {
+  background: url(../images/computer.png) no-repeat center;
+  width: 12.65625rem;
+  height: 3.95833333rem;
+  margin-top: 4.63541667rem;
+  margin-bottom: 1.66666667rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.page-unionpay .input-row {
+  margin-bottom: 1.66666667rem;
+  padding-left: 7.91666667rem;
+}
+.page-unionpay .input-row label {
+  width: 4.63541667rem;
+}
+.page-unionpay .input-row .UI-input-box {
+  width: 10.41666667rem;
+}
+.page-unionpay .submit-form .btn-submit {
+  margin-left: 15.20833333rem;
+}
+.page-unionpay .results-view {
+  margin-bottom: 2.08333333rem;
+}
+.page-unionpay .results-view ul {
+  margin-top: 2.08333333rem;
+}
+.page-unionpay .results-view li {
+  padding-left: 10.10416667rem;
+}
